@@ -4,8 +4,8 @@ body .navbar{
     width: 100%;
     display: flex;
     align-items: center;
+    border-radius: 20px;
     justify-content: space-between;
-    margin:-1vh 1px;
 }
 .navbar .cont1{
     list-style: none;
@@ -73,6 +73,25 @@ body .navbar{
 .cont2 a:hover {
     color: gold;
     font-weight: bolder;
+}
+
+.material-symbols-outlined {
+    margin-left: 10px;
+}
+
+.search_box button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    transition: none;
+}
+
+.search_box button:disabled {
+    cursor: default;
 }
 
 .material-symbols-outlined {
