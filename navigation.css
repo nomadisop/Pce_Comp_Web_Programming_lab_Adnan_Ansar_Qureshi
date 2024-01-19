@@ -93,3 +93,22 @@ body .navbar{
 .search_box button:disabled {
     cursor: default;
 }
+
+.material-symbols-outlined {
+    margin-left: 10px;
+}
+
+.search_box button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    transition: none;
+}
+
+.search_box button:disabled {
+    cursor: default;
+}
