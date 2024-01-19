@@ -70,23 +70,26 @@ body .navbar{
     color: gold;
     font-weight: bolder;
 }
-.cont2 a:hover{
+.cont2 a:hover {
     color: gold;
     font-weight: bolder;
 }
-.material-symbols-outlined{
+
+.material-symbols-outlined {
     margin-left: 10px;
 }
+
 .search_box button {
     border: none;
-    background: transparent; 
+    background: transparent;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bolder;
-    transition: none; 
+    transition: none;
 }
+
 .search_box button:disabled {
     cursor: default;
 }
