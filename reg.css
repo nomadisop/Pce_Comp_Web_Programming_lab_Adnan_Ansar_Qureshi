@@ -50,16 +50,16 @@ body .navbar{
 
 
 
+
 .maincnt{
     background-color: greenyellow;
     width: 25%;
 }
 .regbox h2{
     text-align: center;
+    width: 100%;
 }
-.regbox label{
-    display: block;
-}
+
 
 .regbox{
     position: absolute;
@@ -71,15 +71,23 @@ body .navbar{
   border-radius: 10px;
   border-color: grey;
   display: flex;
-  flex-direction: column;
-  width: 20%;
+  flex-wrap: wrap;
+  width: 30%;
+}
+.regbox label{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .regbox input{
-    width: 100%;
-    border: 1px solid #ccc;
+    width: 50%;
+    padding: 2px 12px;
+    margin: 3px;
+    border: 1px solid rgb(204, 204, 204);
     border-radius: 4px;
-    height: 3vh;
+    height: 4vh;
 }
 
 .regbox button{
@@ -90,10 +98,10 @@ body .navbar{
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    width: 100%;
     margin-top: 2vh;
 }
 
 .regbox button:hover{
-    
     background-color: #0056b3;
 }
