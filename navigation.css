@@ -1,14 +1,16 @@
 body .navbar{
     background-color: darkgray;
     min-height: 9vh;
+    width: 100%;
     display: flex;
     align-items: center;
+    border-radius: 20px;
     justify-content: space-between;
-    margin:-1vh;
 }
 .navbar .cont1{
     list-style: none;
     display: flex;
+    font-family: 'Lexend', sans-serif;
     flex-wrap: wrap;
 }
 .logo{
@@ -26,24 +28,68 @@ body .navbar{
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    font-family: 'Lexend', sans-serif;
     align-items: flex-end;
     margin: 0px 20px;
     margin-left: auto;
 }
 .search_box{
     align-items: center;
+    width: 50%;
+    justify-content: center;
 }
 
 .search_box input{
-    border: none;
-    width: 130%;
-    padding: 5%;
+    width: 100%;
+    padding: 4%;
     border-radius: 14px;
+    margin-left: 14px;
+    color: white;
+    font-family: 'Lexend', sans-serif;
     box-sizing: border-box;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+.search_box img{
+    height: 20px;
+}
+::placeholder{
+    color: rgba(255, 255, 255, 0.619);
+}
+.search{
+    width: max-content;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 2px;
+    border-radius: 14px;
+    background: #8a8a8a;
 }
 .cont1 a:hover{
-    color: green;
+    color: gold;
+    font-weight: bolder;
 }
-.cont2 a:hover{
-    color: green;
+.cont2 a:hover {
+    color: gold;
+    font-weight: bolder;
+}
+
+.material-symbols-outlined {
+    margin-left: 10px;
+}
+
+.search_box button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    transition: none;
+}
+
+.search_box button:disabled {
+    cursor: default;
 }
