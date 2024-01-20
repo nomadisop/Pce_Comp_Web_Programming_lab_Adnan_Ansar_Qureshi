@@ -54,6 +54,7 @@ body .navbar{
 .maincnt{
     background-color: greenyellow;
     width: 25%;
+    margin-top:3vh;
 }
 .regbox h2{
     text-align: center;
