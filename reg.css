@@ -81,7 +81,7 @@ body .navbar{
     position: relative;
 }
 
-.regbox input{
+.inpbox{
     width: 50%;
     padding: 2px 12px;
     margin: 3px;
@@ -89,7 +89,6 @@ body .navbar{
     border-radius: 4px;
     height: 4vh;
 }
-
 .regbox button{
     background-color: #007BFF;
     color: #fff;
@@ -104,4 +103,7 @@ body .navbar{
 
 .regbox button:hover{
     background-color: #0056b3;
+}
+.gender{
+    display: inline-block;
 }
