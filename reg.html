@@ -43,18 +43,19 @@
         <ul>
     </div>
 
+    <form action="#" method="post"> 
     <div class="maincnt">
-        <div class="regbox">
-            <h2>Register</h2>
+        <div class="regbox">  
+            <h2>Register</h2>   
             <label for="FirstName" >First Name:</label>
-            <input type="text" id="fname" required class="inpbox" placeholder="Enter your first name">
+            <input type="text" id="fname" required class="inpbox" placeholder="Enter your first name" autofocus>
             <label for="LastName">Last Name:</label>
             <input type="text" id="lname" required class="inpbox" placeholder="Enter your last name">
             <label for="Gender">Gender:</label>
             <input type="radio" value="Male" class="gender" name="Gender"><p class="gender1">Male</p>
             <input type="radio" value="Female" class="gender" name="Gender"><p class="gender1">Female</p>
             <label for="contact">Contact:</label>
-            <input type="text" id="tel" maxlength="10" required class="inpbox" placeholder="Enter your phone number">
+            <input type="text" id="tel" pattern="[0-9]{10}" class="inpbox" placeholder="Enter your phone number">
             <label for="Email">Email:</label>
             <input type="email" id="email" required class="inpbox" placeholder="Enter your email address">
             <label for="Username">Username:</label>
@@ -68,10 +69,11 @@
             </div>
             <div style="display: block;margin-top:2vh;width: 100%;">
                 <center>
-                <button type="submit" >Register NOW!!</button>
+                <button type="submit" >Register</button>
             </center>
-            </div>
+            </div> 
         </div>
     </div>
+    </form>   
 </body>
 </html>
