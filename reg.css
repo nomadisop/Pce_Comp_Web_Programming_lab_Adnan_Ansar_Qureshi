@@ -79,7 +79,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
   border: solid;
-  padding: 10vb;
+  padding: 8vb;
   border-radius: 10px;
   border-color: grey;
   display: flex;
@@ -122,4 +122,8 @@ body{
 }
 .gender{
     display: inline-block;
+}
+
+.user{
+    display: block; 
 }
