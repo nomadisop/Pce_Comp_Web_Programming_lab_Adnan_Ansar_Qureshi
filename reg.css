@@ -86,6 +86,14 @@ body{
   flex-wrap: wrap;
   width: 30%;
   margin-top: 5vh;
+  background-image:linear-gradient(#2eaed9 0%,
+    #6bb8cf 10%,
+    #7fc3d6 16%,
+    #9eb4c2 24%,
+    #bb9fae 40%,
+    #c49fae 48%,
+    #d39586 76%,
+    #d63176 100%);
 }
 .regbox label{
     width: 40%;
