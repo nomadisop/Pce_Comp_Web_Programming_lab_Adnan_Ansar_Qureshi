@@ -79,7 +79,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
   border: solid;
-  padding: 8vb;
+  padding: 5vb;
   border-radius: 10px;
   border-color: grey;
   display: flex;
