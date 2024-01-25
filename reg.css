@@ -7,7 +7,7 @@ body .navbar{
     margin: -1vh;
 }
 body{
-    background-image:linear-gradient(90deg,#EADEDB 0%, #BC70A4 50%, #BFD641 75%)
+    background-image:linear-gradient(90deg,#7a76f2 0%, #403894 50%, #192daa 75%);
   }
 .navbar .cont1{
     list-style: none;
@@ -51,7 +51,9 @@ body{
     color: green;
 }
 
-
+.maincnt input::placeholder{
+    color: #9caaaa;
+}
 
 
 .maincnt{
@@ -60,8 +62,11 @@ body{
 }
 .gender1 ,label{
     font-family: 'Kanit', sans-serif;
+    color: white;
 }
-
+.regbox{
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.2);
+}
 .regbox h2{
     text-align: center;
     width: 100%;
@@ -69,6 +74,10 @@ body{
 }
 .a_user{
     font-family: 'Kanit', sans-serif;
+    color: #32cda9;
+}
+.a_user:hover{
+    color: #3eeac2;
 }
 
 
@@ -86,14 +95,7 @@ body{
   flex-wrap: wrap;
   width: 30%;
   margin-top: 5vh;
-  background-image:linear-gradient(#2eaed9 0%,
-    #6bb8cf 10%,
-    #7fc3d6 16%,
-    #9eb4c2 24%,
-    #bb9fae 40%,
-    #c49fae 48%,
-    #d39586 76%,
-    #d63176 100%);
+  background-color: #2e3047;
 }
 .regbox label{
     width: 40%;
@@ -106,12 +108,15 @@ body{
     width: 50%;
     padding: 2px 12px;
     margin: 3px;
-    border: 1px solid rgb(204, 204, 204);
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #36395a;
     border-radius: 4px;
     height: 4vh;
 }
+
 .regbox button{
-    background-color: #007BFF;
+    background-image:linear-gradient(90deg,#5e5acf 0%, #483ebc 50%, #1c33c6 75%);
     font-family: 'Comfortaa', cursive;
     color: #fff;
     padding: 10px;
@@ -126,8 +131,10 @@ body{
 }
 
 .regbox button:hover{
-    background-color: #0056b3;
+    background-image: none;
+    background-color: #2437b2;
 }
+
 .gender{
     display: inline-block;
 }
