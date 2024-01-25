@@ -68,11 +68,11 @@ body{
 .lg-cnt {
     background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
     display: inline-block;
     padding-right: 5vb;
-    border-style: solid;
     border-color: grey;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     
 
   }
@@ -105,9 +105,7 @@ body{
 
   .frm-grp input {
     width: 100%;
-    padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 4px;
   }
 
   .form-group button {
@@ -126,9 +124,9 @@ body{
 
   .smb{
     align-self: center;
+    width:100%;
   }
 
   .lginp{
-    width: auto;
-    
+    width:100%;
   }
