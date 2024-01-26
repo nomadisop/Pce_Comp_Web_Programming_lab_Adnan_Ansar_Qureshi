@@ -16,7 +16,7 @@ body{
 
 .wlcm-container{
     display: inline-block;
-    border: solid;
+    border:none;
     text-align: center;
 
 }
@@ -30,6 +30,7 @@ body{
   border-color: grey;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  border: none;
   width: 30%;
   }
 
@@ -62,11 +63,7 @@ body{
     font-weight: bold;
   }
 
-  .frm-grp input {
-    width: 100%;
-    border: 1px solid #ccc;
-  }
-
+ 
   .form-group button {
     background-color: #007BFF;
     color: #fff;
@@ -86,6 +83,20 @@ body{
     width:100%;
   }
 
+
   .lginp{
-    width:100%;
+    width:80%;
+    margin-left: 3vb;
+    border:0px;
+    border-bottom: solid;
+  }
+
+  .lginp:focus{
+    border:none;
+    border-bottom:solid;
+    outline: none;
+  }
+
+  .lginp::placeholder{
+    color:gray;
   }
