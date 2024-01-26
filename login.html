@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="login.css" rel="stylesheet">
+    <link rel="stylesheet" href="navigation.css"> 
+    <link rel="stylesheet" href="/navigation.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
     <title>Login</title>
 </head>
 <body>
@@ -16,8 +22,11 @@
             </div>
         </ul>
     <div class="search_box">
-            <form action="get">
-                <input type="text" placeholder="Search...">
+            <form action="#" method="get">
+                <div class="search">
+                    <button class="submit_search" id = "submit_button" type="submit"><span class="material-symbols-outlined">search</span></button>
+                    <input class="searchForm" id="searchForm" type="text" placeholder="Search" style = "color:white;" autocomplete="off">
+                </div>
             </form>
     </div>
         <ul>
@@ -40,11 +49,11 @@
         </div>
     
         <div class="lg-cnt" >
-            <h2 style="border-bottom: solid;width:auto;border-color: blue;">Login</h2>
+            <div style="display: block;"><h2 style="border-bottom: solid;width:auto;border-color: blue;">Login</h2></div>
             <form class="logfrm">
               <div class="frm-grp">
                 <img src="usericon.png" width="18vb" style="position: absolute;padding-top: 0vh;">
-                <input type="text" id="username" class="lginp" placeholder="     Username" style="border:none;border-bottom: solid;">
+                <input type="text" id="username" class="lginp" placeholder="Username" style="border:none;border-bottom: solid;">
               </div>
               <div class="frm-grp"> 
                 <img src="lock.png" width="18vb" style="position: absolute;overflow: hidden;">
@@ -65,6 +74,6 @@
     
     
 
-    
+    <script src="navigation.js" defer></script>
 </body>
 </html>
