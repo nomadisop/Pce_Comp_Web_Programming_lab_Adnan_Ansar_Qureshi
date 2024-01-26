@@ -113,6 +113,12 @@ body{
     background: #36395a;
     border-radius: 4px;
     height: 4vh;
+    border:0px;
+    border-bottom: solid;
+}
+
+.inpbox:focus{
+    outline: none;
 }
 
 .regbox button{
