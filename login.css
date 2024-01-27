@@ -10,7 +10,7 @@ body .navbar{
 }
 
 body{
-  background-image:linear-gradient(90deg,#EADEDB 0%, #BC70A4 50%, #BFD641 75%)
+  background-image:linear-gradient(90deg,#7a76f2 0%, #403894 50%, #192daa 75%);
 }
   
 
@@ -21,19 +21,25 @@ body{
 
 }
 .lg-cnt {
-  background-color: #fff;
+  background-color: #2E3047;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-right: 5vb;
   border-color: grey;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-right-radius: 40px;
   border: none;
-  width: 30%;
+  width: 33%;
   }
 
+  .lg-cnt input{
+    background: #36395a;
+    border-radius: 4px;
+    height: 4vh;
+    border: 0px;
+    border-bottom: solid;
+  }
 .contmain{
   position: absolute;
   top: 50%;
@@ -46,6 +52,8 @@ body{
 
   .lg-cnt h2 {
     text-align: center;
+    font-weight: 500;
+    font-family: 'Kanit', sans-serif;
   }
 
   .logfrm {
@@ -54,6 +62,8 @@ body{
   }
 
   .frm-grp {
+    display: flex;
+    align-items: center;
     margin-bottom: 15px;
   }
 
@@ -65,17 +75,19 @@ body{
 
  
   .form-group button {
-    background-color: #007BFF;
+    background-image:linear-gradient(90deg,#5e5acf 0%, #483ebc 50%, #1c33c6 75%);
     color: #fff;
     padding: 10px;
     border: none;
+    margin: 10px auto;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
   }
 
   .form-group button:hover {
-    background-color: #0056b3;
+    background-image: none;
+    background-color: #2437b2;
   }
 
   .smb{
@@ -85,10 +97,26 @@ body{
 
 
   .lginp{
-    width:80%;
+    width:90%;
+    background: transparent;
+    color: white;
+    margin-bottom: 1px;
+    padding-left: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-left: 3vb;
     border:0px;
     border-bottom: solid;
+  }
+  .frm-grp img{
+    margin-right: 3px;
+  }
+  .not_user{
+    font-family: 'Kanit', sans-serif;
+    color: #32cda9;
+    font-size: 15px;
+  }
+  .not_user:hover{
+    color: #3eeac2;
   }
 
   .lginp:focus{
