@@ -1,12 +1,14 @@
 body .navbar{
     background-color: #c1a780;
-    min-height: 9vh;
-    width: 101%;
-    display: flex;
+    min-height: 8vh;
+    max-height: 12vh;
+    width: 100%;
+    display:flex;
+    
     align-items: center;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 .navbar .cont1{
     list-style: none;
