@@ -4,7 +4,8 @@ body .navbar{
     width: 101%;
     display: flex;
     align-items: center;
-    border-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     justify-content: space-between;
 }
 .navbar .cont1{
@@ -14,7 +15,11 @@ body .navbar{
     flex-wrap: wrap;
 }
 .logo{
-    font-weight: bolder;
+    height:10vh;
+  }
+
+.icons{
+    margin-top: 10vh;
 }
 .navbar ul li a{
     text-decoration: none;
