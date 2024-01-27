@@ -1,12 +1,12 @@
 body .navbar{
-    background-color: darkgray;
+    background-color: #c1a780;
     min-height: 9vh;
     width: 101%;
     display: flex;
     align-items: center;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 .navbar .cont1{
     list-style: none;
@@ -60,7 +60,7 @@ body .navbar{
     height: 20px;
 }
 ::placeholder{
-    color: rgba(255, 255, 255, 0.619);
+    color:black;
 }
 .search{
     width: max-content;
@@ -69,7 +69,7 @@ body .navbar{
     display: flex;
     padding: 2px;
     border-radius: 14px;
-    background: #8a8a8a;
+    background: white;
 }
 .cont1 a:hover{
     color: gold;
