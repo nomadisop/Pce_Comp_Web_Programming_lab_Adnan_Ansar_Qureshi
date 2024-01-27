@@ -1,10 +1,9 @@
 body .navbar{
     background-color: #c1a780;
     min-height: 8vh;
-    max-height: 12vh;
+    max-height: 11vh;
     width: 100%;
     display:flex;
-    
     align-items: center;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -13,6 +12,7 @@ body .navbar{
 .navbar .cont1{
     list-style: none;
     display: flex;
+    align-items: center;
     font-family: 'Lexend', sans-serif;
     flex-wrap: wrap;
 }
@@ -25,6 +25,8 @@ body .navbar{
 }
 .navbar ul li a{
     text-decoration: none;
+    display: flex;
+    align-items: center;
     color: white;
     font-weight: 500;
 }
@@ -51,7 +53,7 @@ body .navbar{
     padding: 4%;
     border-radius: 14px;
     margin-left: 14px;
-    color: white;
+    color: black;
     font-family: 'Lexend', sans-serif;
     box-sizing: border-box;
     outline: none;
@@ -76,10 +78,12 @@ body .navbar{
 .cont1 a:hover{
     color: gold;
     font-weight: bolder;
+    transform: scale(1.02);
 }
 .cont2 a:hover {
     color: gold;
     font-weight: bolder;
+    transform: scale(1.02);
 }
 
 .material-symbols-outlined {
