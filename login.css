@@ -7,9 +7,13 @@ body .navbar{
     align-items: center;
     justify-content: space-between;
 }
+.cont1 .logo{
+  height: 9vh;
+}
 
-
-
+.cont2 a:hover img {
+  transform: scale(1.2);
+}
 body{
   background-image: url(bgimg.jpg);
   background-size:cover;
@@ -55,7 +59,7 @@ body{
   top: 50%;
   left: 50%;
   margin-top: 11vh;
-  height: 60vh;
+  height: 68vh;
   width: 80%;
   min-width:200px;
   max-width:1000px;
