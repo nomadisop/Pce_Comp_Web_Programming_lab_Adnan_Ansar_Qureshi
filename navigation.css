@@ -1,13 +1,14 @@
 body .navbar{
     background-color: #c1a780;
     min-height: 8vh;
-    max-height: 11vh;
-    width: 100%;
+    max-height: 20vh;
+    width:100%;
     display:flex;
     align-items: center;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 .navbar .cont1{
     list-style: none;
@@ -34,25 +35,30 @@ body .navbar{
     margin: 0px 10px;
 }
 .cont2 {
-    list-style: none;
+    list-style:none;
     display: flex;
     flex-wrap: wrap;
     font-family: 'Lexend', sans-serif;
     align-items: flex-end;
     margin: 0px 20px;
     margin-left: auto;
+    max-width: 100%;
+    padding-left: 5vb;
 }
 .search_box{
     align-items: center;
-    width: 50%;
+    max-width: 33%;
+    min-width:10%;
     justify-content: center;
+    display: inline-flex;
 }
 
 .search_box input{
     width: 100%;
-    padding: 4%;
+    max-width: 100vb;
+    min-width:5vb;
     border-radius: 14px;
-    margin-left: 14px;
+    margin-left: 1px;
     color: black;
     font-family: 'Lexend', sans-serif;
     box-sizing: border-box;
@@ -67,11 +73,11 @@ body .navbar{
     color:black;
 }
 .search{
-    width: max-content;
+    width:100%;
     justify-content: center;
     align-items: center;
     display: flex;
-    padding: 2px;
+    padding: 4px;
     border-radius: 14px;
     background: white;
 }

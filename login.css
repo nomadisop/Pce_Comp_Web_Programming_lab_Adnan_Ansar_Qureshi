@@ -1,12 +1,4 @@
 
-
-body .navbar{
-    background-color: darkgray;
-    min-height: 9vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 .cont1 .logo{
   height: 9vh;
 }
