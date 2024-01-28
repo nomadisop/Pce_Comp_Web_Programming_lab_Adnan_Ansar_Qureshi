@@ -29,27 +29,18 @@ body{
   padding:50px;
   text-align: center;
   color: white;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: rgba(128, 128, 128, 0.5);
   border-right: solid;
   width: 60%;
 }
-.lg-cnt {
-  background-color:none; 
-  padding: 20px;
-  display:inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  border-color: grey;
-  border-bottom-right-radius: 40px;
-  border: none;
-  width: 40%;
-  overflow: hidden;
-  }
-
   .lg-cnt input{
     background: none;
     border-radius: 4px;
     height: 4vh;
     border: 0px;
+    font-weight: 600;
     border-bottom: solid;
     border-color: black;
     width:25vb;
@@ -68,8 +59,25 @@ body{
   backdrop-filter: blur(10px);
   border: solid;
   border-color: white;
+  box-shadow: 9px 4px 11px 7px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
   margin-bottom: 20vh;
 }
+
+.lg-cnt {
+  background-color:none; 
+  padding: 20px;
+  display:inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  border-color: rgb(11, 11, 11);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: none;
+  background-color: rgba(48, 43, 43, 0.5);
+  width: 40%;
+  overflow: hidden;
+  }
 
   .lg-cnt h2 {
     text-align: center;
@@ -96,19 +104,19 @@ body{
 
  
   .form-group button {
-    background-image:linear-gradient(90deg,#5e5acf 0%, #483ebc 50%, #1c33c6 75%);
+    background-color: #05b205;
     color: #fff;
     padding: 10px;
     border: none;
     margin: 10px auto;
-    border-radius: 4px;
+    border-radius: 16px;
     cursor: pointer;
     font-size: 16px;
   }
 
   .form-group button:hover {
     background-image: none;
-    background-color: #2437b2;
+    background-color: #069b06;
   }
 
   .smb{
@@ -147,5 +155,6 @@ body{
   }
 
   .lginp::placeholder{
-    color:white;
+    color:rgb(195, 178, 178);
+    font-weight: 600;
   }
