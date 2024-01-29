@@ -8,6 +8,7 @@ body .navbar{
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     justify-content: space-between;
+    box-shadow: 23px 4px 9px 6px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
 }
 .navbar .cont1{
@@ -82,12 +83,12 @@ body .navbar{
     background: white;
 }
 .cont1 a:hover{
-    color: gold;
+    color: #068a06;
     font-weight: bolder;
     transform: scale(1.02);
 }
 .cont2 a:hover {
-    color: gold;
+    color: #068a06;
     font-weight: bolder;
     transform: scale(1.02);
 }
