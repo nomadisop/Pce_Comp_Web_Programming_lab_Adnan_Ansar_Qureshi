@@ -7,7 +7,7 @@
   transform: scale(1.2);
 }
 body{
-  background-image: url(bgimg.jpg);
+  background-image: url(images/bgimg.jpg);
   background-size:cover;
   background-repeat: no-repeat;
   flex-direction: column;
