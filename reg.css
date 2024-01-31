@@ -1,60 +1,22 @@
-body .navbar{
-    background-color: darkgray;
-    min-height: 9vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: -1vh;
-}
-body{
-    background-image:linear-gradient(90deg,#7a76f2 0%, #403894 50%, #192daa 75%);
-  }
-.navbar .cont1{
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-}
-.logo{
-    font-weight: bolder;
-}
-.navbar ul li a{
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-}
-.navbar ul li{
-    margin: 0px 10px;
-}
-.cont2 {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    margin: 0px 20px;
-    margin-left: auto;
-}
-.search_box{
-    align-items: center;
-}
 
-.search_box input{
-    border: none;
-    width: 130%;
-    padding: 5%;
-    border-radius: 14px;
-    box-sizing: border-box;
-}
-.cont1 a:hover{
-    color: green;
-}
-.cont2 a:hover{
-    color: green;
-}
+body{
+    background-image: url(images/bgimg.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0%;
+  }
+  
+
 
 .maincnt input::placeholder{
-    color: #9caaaa;
+    color: #c2bdbd;
 }
-
+.maincnt input{
+    font-weight: 500;
+}
 
 .maincnt{
     width: 25%;
@@ -82,9 +44,8 @@ body{
 
 
 .regbox{
-    background-color: white;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
   border: solid;
@@ -92,10 +53,13 @@ body{
   border-radius: 10px;
   border-color: grey;
   display: flex;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  backdrop-filter: blur(10px);
   flex-wrap: wrap;
   width: 30%;
   margin-top: 5vh;
-  background-color: #2e3047;
+  background-color: rgba(48, 43, 43, 0.5);
 }
 .regbox label{
     width: 40%;
@@ -110,7 +74,7 @@ body{
     margin: 3px;
     color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: #36395a;
+    background-color: rgba(128, 128, 128, 0.5);
     border-radius: 4px;
     height: 4vh;
     border:0px;
@@ -122,7 +86,7 @@ body{
 }
 
 .regbox button{
-    background-image:linear-gradient(90deg,#5e5acf 0%, #483ebc 50%, #1c33c6 75%);
+    background-color: #05b205;
     font-family: 'Comfortaa', cursive;
     color: #fff;
     padding: 10px;
@@ -138,7 +102,7 @@ body{
 
 .regbox button:hover{
     background-image: none;
-    background-color: #2437b2;
+    background-color: #069b06;
 }
 
 .gender{
