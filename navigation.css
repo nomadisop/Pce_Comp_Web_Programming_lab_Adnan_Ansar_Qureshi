@@ -83,12 +83,12 @@ body .navbar{
     background: white;
 }
 .cont1 a:hover{
-    color: #068a06;
+    color: rgb(149, 132, 37);
     font-weight: bolder;
     transform: scale(1.02);
 }
 .cont2 a:hover {
-    color: #068a06;
+    color: rgb(149, 132, 37);
     font-weight: bolder;
     transform: scale(1.02);
 }
