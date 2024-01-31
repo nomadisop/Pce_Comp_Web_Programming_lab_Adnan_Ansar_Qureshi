@@ -73,6 +73,13 @@ body .navbar{
 ::placeholder{
     color:black;
 }
+.cont1 .logo{
+    height: 9vh;
+}
+  
+.cont2 a:hover img {
+    transform: scale(1.2);
+}
 .search{
     width:100%;
     justify-content: center;

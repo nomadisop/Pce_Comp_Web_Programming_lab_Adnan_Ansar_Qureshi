@@ -1,13 +1,6 @@
 
-.cont1 .logo{
-  height: 9vh;
-}
-
-.cont2 a:hover img {
-  transform: scale(1.2);
-}
 body{
-  background-image: url(images/bgimg.jpg);
+  background-image:url(images/bgimg.jpg);
   background-size:cover;
   background-repeat: no-repeat;
   flex-direction: column;
@@ -51,7 +44,6 @@ body{
   backdrop-filter: blur(10px);
   border: solid;
   border-color: white;
-  box-shadow: 9px 4px 11px 7px rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
   margin-bottom: 20vh;
 }
@@ -133,11 +125,11 @@ body{
   }
   .not_user{
     font-family: 'Kanit', sans-serif;
-    color: white;
+    color: #3eeac2;
     font-size: 15px;
   }
   .not_user:hover{
-    color: #3eeac2;
+    color: #32cda9;
   }
 
   .lginp:focus{
