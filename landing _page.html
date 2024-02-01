@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="reg.css" rel="stylesheet">
+    <link href="lp.css" rel="stylesheet">
     <link rel="stylesheet" href="navigation.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">     
-    <title>Registeration Page</title>
+    <title>Welcome</title>
 </head>
 <body>
     <div class="navbar">
@@ -39,7 +39,8 @@
     </div>
         <ul style="padding-left: 0;max-width:fit-content;">
             <div class="cont2">
-                li
+                <li><a href="index.html">Login</a></li>
+                <li><a href="reg.html">Register</a></li>
                 <li class="home"><a href="#">About</a></li>
                 <li class="team"><a href="#">Contact</a></li>
                 <li class="home"><a href="#"><img src="images/ins.png" alt="insta" style="height: 3vh;"></a></li>
@@ -48,40 +49,9 @@
             </div>
         </ul>
     </div>
-    <section>
 
-    <form action="#" method="post"> 
-    <div class="maincnt">
-        <div class="regbox">  
-            <h2 style="color:white;font-weight: 500;">Sign up</h2>   
-            <label for="FirstName" >First Name:</label>
-            <input type="text" id="fname" required class="inpbox"   placeholder="Enter your first name" autofocus>
-            <label for="LastName">Last Name:</label>
-            <input type="text" id="lname" required class="inpbox" placeholder="Enter your last name">
-            <label for="Gender">Gender:</label>
-            <input type="radio" value="Male" class="gender" name="Gender"><p class="gender1">Male</p>
-            <input type="radio" value="Female" class="gender" name="Gender"><p class="gender1">Female</p>
-            <label for="contact">Contact:</label>
-            <input type="tel" id="tel" maxlength="10" inputmode="numeric" pattern="^[0-9]{10}$" class="inpbox" placeholder="Enter your phone number">
-            <label for="Email">Email:</label>
-            <input type="email" id="email" required class="inpbox" placeholder="Enter your email address" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
-            <label for="Username">Username:</label>
-            <input type="text" id="username" required class="inpbox" placeholder="Choose a username">
-            <label for="Password">Password:</label>
-            <input type="password" id="password" required class="inpbox" placeholder="Create a strong password">
-            <label for="Password"> Retype Password:</label>
-            <input type="password" id="retype_password" required class="inpbox" placeholder="Confirm your password">
-            <div class="user">
-            <a href="index.html" class="a_user">Already a user ?</a>
-            </div>
-            <div style="display: block;margin-top:2vh;width: 100%;">
-                
-                <button type="submit" >Register</button>
-            
-            </div> 
-        </div>
-    </div>
-    </form>   
-    </section>
+    
+
+    <script src="navigation.js" defer></script>
 </body>
 </html>

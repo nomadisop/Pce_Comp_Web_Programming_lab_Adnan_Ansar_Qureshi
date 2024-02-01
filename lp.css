@@ -1,0 +1,9 @@
+body{
+    background-size:cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0%;
+  }
+    

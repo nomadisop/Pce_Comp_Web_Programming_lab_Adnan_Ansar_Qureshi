@@ -91,11 +91,11 @@ body .navbar{
 }
 .cont1 a:hover{
     color: rgb(149, 132, 37);
-    font-weight: bolder;
     transform: scale(1.02);
 }
 .cont2 a:hover {
     color: rgb(149, 132, 37);
+    transform: scale(1.02);
 }
 
 .material-symbols-outlined {
