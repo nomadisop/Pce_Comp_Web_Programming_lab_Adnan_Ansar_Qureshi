@@ -96,8 +96,6 @@ body .navbar{
 }
 .cont2 a:hover {
     color: rgb(149, 132, 37);
-    font-weight: bolder;
-    transform: scale(1.02);
 }
 
 .material-symbols-outlined {
