@@ -1,0 +1,19 @@
+body{
+    background-image:url(images/bgimg.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0%;
+  }
+  
+  section{
+    background-color: white;border-radius: 50px;padding: 20px;
+  }
+
+  .footer{
+    display:flex;
+    width: 100%;
+    background-color: #c1a780;
+  }
