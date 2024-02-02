@@ -98,10 +98,6 @@ body .navbar{
     transform: scale(1.02);
 }
 
-.material-symbols-outlined {
-    margin-left: 10px;
-}
-
 .search_box button {
     border: none;
     background: transparent;
@@ -115,10 +111,6 @@ body .navbar{
 
 .search_box button:disabled {
     cursor: default;
-}
-
-.material-symbols-outlined {
-    margin-left: 10px;
 }
 
 .search_box button {
