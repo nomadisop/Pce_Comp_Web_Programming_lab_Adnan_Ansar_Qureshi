@@ -35,6 +35,10 @@ body{
     .navbar{
         max-width: 479px;
     }
+
+    .btns{
+      margin-top: 2vh;
+    }
   }
   
 
@@ -46,7 +50,7 @@ body{
     .main-cnt{
         display: flex;
         width: 80%;
-        max-height: 80vh;
+        max-height:80vh;
     }
 
     .pn{
@@ -65,6 +69,26 @@ body{
       transform: height;
       
     }
+    .size{
+      display: inline-flex;
+    }
+
+    .right{
+      max-width: 50%;
+      text-align: center;
+    }
+
+    .pd{
+      max-height:fit-content;
+
+    }
+
+    .btns{
+      margin-top: 5vh;
+    }
+
+    
+
   }   
 
   body table,th,td{
@@ -73,3 +97,36 @@ body{
   }
 
   tr:hover {background-color: #D6EEEE;}
+
+  .btn1{
+    background-color: #c1a780;
+    width:45%;
+    height:5vh;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.3s;
+  }
+
+  .btn1:hover{
+    color:#c1a780;
+    background-color: white;
+  }
+  
+
+  .btn2{
+    background-color: white;
+    color:#c1a780;
+    width: 45%;
+    display: inline-flex;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+  }
+
+  .btn2:hover{
+    background-color: #c1a780;
+    color:white;
+  }
