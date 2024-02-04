@@ -1,18 +1,12 @@
 Pleade Update Readme file... TEMPLATE
 
-# Project Name
+#Eco Freindly Clothing Marketplace
 
 Brief description or tagline about your project.
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
+- Wassup
 ## Introduction
 
 introduction, Problem?, Solution?
