@@ -17,11 +17,17 @@ body{
         width: 100%;
         border-bottom: solid;
         max-height:100vh;
+        display: block;
     }
     .main-cnt{
         width: 95%;
         margin-left: 2.2%;
         margin-right: 2.5%;
+        display: block;
+    }
+
+    .right{
+      display: block;
     }
 
     body table{
