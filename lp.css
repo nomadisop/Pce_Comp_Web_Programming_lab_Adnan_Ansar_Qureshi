@@ -308,6 +308,23 @@ body{
 }
 
 
+/* footer */
+
+footer{
+  margin-top: 5vh;
+  background-color: #c1a780;
+  height: 70vh;
+}
+.footer{
+  height: 90%;
+}
+.footer-bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+}
+
 
 
 
