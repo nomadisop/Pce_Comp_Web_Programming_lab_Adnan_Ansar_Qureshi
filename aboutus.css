@@ -4,7 +4,6 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    margin: 0%;
   }
   
   body{
@@ -12,10 +11,6 @@ body{
     flex-direction: column;
     margin: 0%;
     text-align: center;
-  }
-
-  section{
-    background-color: white;border-radius: 50px;padding: 20px;
   }
 
   .devhed{
@@ -58,8 +53,26 @@ body{
     }
 
     .navbar{
-      width:auto;
+      width: 100%;
     }
+
+    .mapb{
+      width: 100%;
+    }
+    .mapb iframe{
+      width: 100%;
+    }
+  }
+
+  .mapb{
+    margin-top: 40px;
+    width: 100%;
+   
+  
+  backdrop-filter: blur(10px);
+  border-color: white;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20vh;
   }
 
   .footer{
