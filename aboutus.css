@@ -2,17 +2,68 @@ body{
     background-image:url(images/bgimg.jpg);
     background-size:cover;
     background-repeat: no-repeat;
-    flex-direction: column;
     background-attachment: fixed;
     background-position: center;
     margin: 0%;
   }
   
+  body{
+    background-size:cover;
+    flex-direction: column;
+    margin: 0%;
+    text-align: center;
+  }
+
   section{
     background-color: white;border-radius: 50px;padding: 20px;
   }
 
+  .devhed{
+    font-size: 50px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .devcont{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+
+  .devmain{
+    display: inline-block;
+    width:20%;
+    border-style: solid;
+    border-radius:10px;
+    background-color: white;
+    padding: 10px;
+  }
+
+  @media screen and (max-width: 480px){
+    .devhed{
+      font-size: 20px;
+    }
+    .devcont{
+      display:block;
+      margin-left: 5%;
+
+    }
+
+    .devmain{
+      width: 80%;
+      display:block;
+      margin-bottom:5vh;
+    }
+
+    .navbar{
+      width:auto;
+    }
+  }
+
   .footer{
+    bottom: 0px;
     display:flex;
     width: 100%;
     background-color: #c1a780;
