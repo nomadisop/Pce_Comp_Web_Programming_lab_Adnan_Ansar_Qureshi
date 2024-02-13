@@ -1,0 +1,43 @@
+body{
+    background-size:cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0%;
+  }
+
+  .filters{
+    display: block;
+    width: 20%;
+    background-color: gray;
+    height: 600px;
+  }
+
+  .products{
+    display: flex;
+    flex-wrap: wrap;
+    width: 79%;
+    background-color: wheat;
+    justify-content: space-between;
+  }
+ 
+
+
+  .devcont{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+
+  .devmain{
+    display: inline-block;
+    width:20%;
+    border-style: solid;
+    border-radius:10px;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+  }

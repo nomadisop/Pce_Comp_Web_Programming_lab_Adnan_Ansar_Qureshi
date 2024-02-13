@@ -83,6 +83,12 @@
         </div>
     </div>
     </form>   
+    <?php 
+    $name=$_POST["Gender"];
+        echo "$name";
+
+    ?>
+
     </section>
     <script src="navigation.js" defer></script>
 </body>
