@@ -313,9 +313,12 @@ body{
 footer{
   margin-top: 5vh;
   background-color: #c1a780;
+  font-family: 'Cardo',Georgia,"Times New Roman",serif;
   height: 70vh;
 }
 .footer{
+  display: flex;
+  justify-content: center;
   height: 90%;
 }
 .footer-bottom{
@@ -324,7 +327,64 @@ footer{
   justify-content: center;
   height: 10%;
 }
-
+.footer-main{
+  display: flex;
+  width: 70%;
+}
+.footerWidth{
+  width: 25%;
+}
+.footer-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-main li{
+  padding: 0.5rem;
+  list-style: none;
+}
+.footer-menu{
+  display: flex;
+  flex-direction: column;
+ 
+}
+.footer-contact{
+  display: flex;
+  flex-direction: column;
+ 
+}
+.footer-address{
+  display: flex;
+  flex-direction: column;
+}
+.footer-logo img{
+  border-radius: 20px;
+  width: 55%;
+}
+.social-media{
+  display: flex;
+  flex-wrap: wrap;
+}
+h4{
+  font-size: large;
+  padding: 0.4rem;
+  margin-top: 14vh;
+  margin-bottom: 5vh;
+}
+.footer-phone ,.footer-email{
+  font-weight: 600;
+}
+.footer li a{
+  text-decoration: none;
+  color: black;
+}
+.footer li a:hover{
+  color: #3e3eff;
+}
+.footer-email2, .footer-phone2{
+  color: blue;
+  font-family: 'Courier New', Courier, monospace;
+}
 
 
 
