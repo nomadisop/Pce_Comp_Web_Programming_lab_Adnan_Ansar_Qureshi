@@ -36,6 +36,8 @@ body{
     padding: 10px;
   }
 
+  
+
   @media screen and (max-width: 480px){
     .devhed{
       font-size: 20px;

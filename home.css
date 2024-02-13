@@ -41,3 +41,10 @@ body{
     padding: 10px;
     margin-bottom: 15px;
   }
+
+  .vidcnt{
+    width: 98%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: solid;
+  }
