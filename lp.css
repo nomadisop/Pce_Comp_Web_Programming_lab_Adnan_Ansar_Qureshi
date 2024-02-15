@@ -280,6 +280,9 @@ body{
   display: flex;
   flex-direction: column;
  }
+ .footer-main{
+  width: 100%;
+ }
 }
 
 @media screen and (max-width: 506px){
@@ -314,7 +317,7 @@ footer{
   margin-top: 5vh;
   background-color: #c1a780;
   font-family: 'Cardo',Georgia,"Times New Roman",serif;
-  height: 70vh;
+  height: auto;
 }
 .footer{
   display: flex;
@@ -324,11 +327,14 @@ footer{
 .footer-bottom{
   display: flex;
   align-items: center;
+  margin-top: auto;
   justify-content: center;
   height: 10%;
 }
 .footer-main{
   display: flex;
+  overflow: inherit;
+  max-width: 100%;
   width: 70%;
 }
 .footerWidth{
@@ -344,9 +350,10 @@ footer{
   list-style: none;
 }
 .footer-menu{
-  display: flex;
+  margin-right: 1rem;
+  display: flex; 
   flex-direction: column;
- 
+ flex-wrap: wrap;
 }
 .footer-contact{
   display: flex;
@@ -365,6 +372,7 @@ footer{
   display: flex;
   flex-wrap: wrap;
 }
+
 h4{
   font-size: large;
   padding: 0.4rem;
@@ -387,4 +395,36 @@ h4{
 }
 
 
+@media screen and (max-width: 800px) {
+  .footer-main {
+    width: 80%; /* Adjust width for smaller screens */
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-logo{
+    display: none;
+  }
+  .footer-menu,
+  .footer-address,
+  .footer-contact {
+    width: 100%; /* Ensure all footer items take full width on smaller screens */
+  }
+  .footer-main{
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer-logo img {
+    width: 50%; /* Reduce logo size on smaller screens */
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer-logo img {
+    width: 40%; /* Further reduce logo size on even smaller screens */
+  }
+}
 
