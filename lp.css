@@ -169,6 +169,7 @@ body{
 
   .section_2 {
     top: 6vh;
+    margin-bottom: 6vh;
     position: relative;
     display: flex; 
     justify-content: center; 
@@ -312,119 +313,126 @@ body{
 
 
 /* footer */
-
-footer{
-  margin-top: 5vh;
-  background-color: #c1a780;
-  font-family: 'Cardo',Georgia,"Times New Roman",serif;
-  height: auto;
-}
 .footer{
-  display: flex;
-  justify-content: center;
-  height: 90%;
+  font-family: 'Lexend', sans-serif;
+  background-color: #c1a780; 
+  margin: 0;
+  padding: 0;
+  padding: 70px 0;
+  box-sizing: border-box;
 }
-.footer-bottom{
-  display: flex;
-  align-items: center;
-  margin-top: auto;
-  justify-content: center;
-  height: 10%;
+.container-footer{
+    max-width: 1170px;
+    margin: auto;
 }
-.footer-main{
-  display: flex;
-  overflow: inherit;
-  max-width: 100%;
-  width: 70%;
-}
-.footerWidth{
-  width: 25%;
-}
-.footer-logo{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.footer-main li{
-  padding: 0.5rem;
+.footer ul{
   list-style: none;
 }
-.footer-menu{
-  margin-right: 1rem;
-  display: flex; 
-  flex-direction: column;
- flex-wrap: wrap;
-}
-.footer-contact{
+.footer .row{
   display: flex;
-  flex-direction: column;
- 
-}
-.footer-address{
-  display: flex;
-  flex-direction: column;
-}
-.footer-logo img{
-  border-radius: 20px;
-  width: 55%;
-}
-.social-media{
-  display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
-
-h4{
-  font-size: large;
-  padding: 0.4rem;
-  margin-top: 14vh;
-  margin-bottom: 5vh;
+.footer .column{
+  width: 25%;
+  padding: 0 15px;
 }
-.footer-phone ,.footer-email{
-  font-weight: 600;
+.footer .column h4{
+  font-size :18px ;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
 }
-.footer li a{
-  text-decoration: none;
+.footer .column h4::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63 ;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer .column:not(:last-child){
+  margin-bottom: 10px;
+} 
+.footer .column ul li a{
+  font-size: 16px;
+  padding-bottom: 20px;
+  text-transform: capitalize;
   color: black;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease;
 }
-.footer li a:hover{
-  color: #3e3eff;
+.footer .column ul li a:hover{
+  color: white;
+  padding-left: 8px;
 }
-.footer-email2, .footer-phone2{
-  color: blue;
+.footer .column .social-media a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin: 10px 10px 10px 0;
+  text-align: center;
+  line-height: 47px;
+  border-radius: 50px;
+  transition: all 0.5s ease;
+}
+.footer .column .social-media a:hover{
+  color: #24262b;
+  background-color: #ffffff;
+}
+.footer-phone2{
+  margin-bottom: 20px;
+}
+.footer-phone2, .footer-email2{
+  color: rgb(0, 0, 255);
   font-family: 'Courier New', Courier, monospace;
 }
-
-
-@media screen and (max-width: 800px) {
-  .footer-main {
-    width: 80%; /* Adjust width for smaller screens */
+@media(max-width: 948px){
+  .footer{
+    padding-left: 30px;
+  }
+  .footer .column{
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  
+}
+@media(max-width: 575px){
+  .footer{
+    padding-left: 30px;
+  }
+  .footer .column{
+    width: 100%;
+  }
+  .footer h4{
+    text-align: center;
+  }
+  .column{
+    display: flex;
     flex-direction: column;
+    align-items: center;
   }
-}
-
-@media screen and (max-width: 600px) {
-  .footer-logo{
-    display: none;
+  .footer .column ul li a {
+    align-items: center;
   }
-  .footer-menu,
-  .footer-address,
-  .footer-contact {
-    width: 100%; /* Ensure all footer items take full width on smaller screens */
-  }
-  .footer-main{
+  .footer .address li{
+    display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+  .footer .column h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63 ;
+    height: 2px;
+    box-sizing: border-box;
+    width: 100%;
   }
 }
-
-@media screen and (max-width: 500px) {
-  .footer-logo img {
-    width: 50%; /* Reduce logo size on smaller screens */
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .footer-logo img {
-    width: 40%; /* Further reduce logo size on even smaller screens */
-  }
-}
-
