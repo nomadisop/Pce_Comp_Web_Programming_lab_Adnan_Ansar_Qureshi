@@ -45,6 +45,11 @@ body{
     .btns{
       margin-top: 2vh;
     }
+
+    .desc{
+      height:100%;
+    }
+    
   }
   
 
@@ -55,14 +60,15 @@ body{
 
     .main-cnt{
         display: flex;
-        width: 80%;
+        width: 70%;
         max-height:80vh;
+        
     }
 
     .pn{
         text-align: center;
     }
-
+    
     table tr{
         height: 10vh;
     }
@@ -80,18 +86,22 @@ body{
     }
 
     .right{
-      max-width: 50%;
+      max-width:50%;;
       text-align: center;
+      
     }
 
     .pd{
-      max-height:fit-content;
+      max-height:100%;
 
     }
 
     .btns{
       margin-top: 5vh;
     }
+    .pn{height: 20%;}
+
+    .desc{height: 80%;}
 
     
 
@@ -104,21 +114,6 @@ body{
 
   tr:hover {background-color: #D6EEEE;}
 
-  .btn1{
-    background-color: #c1a780;
-    width:45%;
-    height:5vh;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    transition: 0.3s;
-  }
-
-  .btn1:hover{
-    color:#c1a780;
-    background-color: white;
-  }
   
 
   .btn2{
@@ -136,3 +131,5 @@ body{
     background-color: #c1a780;
     color:white;
   }
+
+  

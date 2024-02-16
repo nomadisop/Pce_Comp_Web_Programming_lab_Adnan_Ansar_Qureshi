@@ -20,7 +20,7 @@ body{
   border-right: solid;
   width: 60%;
 }
-  .lg-cnt input{
+  .lginp{
     background: none;
     border-radius: 4px;
     height: 4vh;
@@ -87,7 +87,7 @@ body{
   }
 
  
-  .form-group button {
+  .smb{
     background-color: #05b205;
     color: #fff;
     padding: 10px;
@@ -98,7 +98,7 @@ body{
     font-size: 16px;
   }
 
-  .form-group button:hover {
+  .smb:hover{
     background-image: none;
     background-color: #069b06;
   }
