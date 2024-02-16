@@ -45,18 +45,36 @@
     </div>
         <ul style="padding-left: 0;max-width:fit-content;">
             <div class="cont2">
-                <li class="imgg"><a href="#">About</a></li>
-                <li class="imgg"><a href="#">Contact</a></li>
+                <li class="imgg"><a href="Aboutus.html">About</a></li>
+                <li class="imgg"><a href="contactus.html">Contact</a></li>
                 <li class="imgg"><a href="#"><img src="images/ins.png" alt="insta" style="height: 3vh;"></a></li>
                 <li class="imgg"><a href="#"><img src="images/x.png" alt="twitter" style="height:3vh;"></a></li>
                 <li class="imgg"><a href="#"><img src="images/fb.png" alt="facebook" style="height: 3vh;"></a></li>
-                <li class="socials mm">
-                    <a href="#"><img src="images/menu.png" alt="Menu-icon" style="height:4vh;">Menu</a>
-                </li>
+                
+                    <div class="socials mm">
+                   
+                    <select name="menu" id="menu" style="font-size: 20px;color:white" onchange="goToPage(this)">
+                    <option value="#" selected>Menu</option>
+                    <option value="landing_page.html">Home</option>
+                    <option value="Home.html">Shop</option>
+                    <option value="Aboutus.html">About us</option>
+                    <option value="contactus.html">Contact us</option>
+                    <option value="socials.html">Socials</option>
+                    </select>
+                    </div>
+                
             </div>
         </ul>
     </div>
     <script src="navigation.js" defer></script>
+    <script>
+        function goToPage(select) {
+          var url = select.options[select.selectedIndex].value;
+          if (url) {
+            window.location = url;
+          }
+        }
+    </script>
     
 </body>
 </html>

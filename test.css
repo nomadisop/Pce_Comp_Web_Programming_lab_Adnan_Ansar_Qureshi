@@ -17,6 +17,12 @@ body{
   
   @media screen  and (max-width:537px) {
     .imgg{display: none;}
+    select{
+      appearance: none;
+      background-color: #c1a780;
+      border: none;
+      outline: none;
+    }
     
   }
 
@@ -24,7 +30,7 @@ body{
     .socials{
       display: none;
     }
-
+   
   }   
 
 
