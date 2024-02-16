@@ -84,8 +84,7 @@ body{
 .inpbox:focus{
     outline: none;
 }
-
-.regbox button{
+.button{
     background-color: #05b205;
     font-family: 'Comfortaa', cursive;
     color: #fff;
@@ -99,12 +98,10 @@ body{
     display: block;
     box-sizing: border-box;
 }
-
-.regbox button:hover{
+.button:hover{
     background-image: none;
     background-color: #069b06;
 }
-
 .gender{
     display: inline-block;
 }
