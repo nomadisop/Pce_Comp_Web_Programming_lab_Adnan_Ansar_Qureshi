@@ -9,7 +9,12 @@ Brief description or tagline about your project.
 - Wassup
 ## Introduction
 
-introduction, Problem?, Solution?
+Members:
+Rohiths The Pradeeps
+Adnans The Qureshis
+Aasiyas The Momins
+Dnyaneshs The Mothites
+
 
 ## Features
 
