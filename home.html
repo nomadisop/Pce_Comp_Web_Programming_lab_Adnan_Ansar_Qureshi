@@ -65,7 +65,7 @@
     </div>
     <div class="vidcnt">
         <center>
-            <video src="Green Fashion - Sustainable clothing at UNEA.mp4" style="width:80%" autoplay loop
+            <video src="Green Fashion - Sustainable clothing at UNEA.mp4" style="width:80%" 
                 controls></video>
         </center>
     </div>
@@ -77,7 +77,11 @@
             </div>
             <div>
                 <input type="checkbox" name="winterwear" id="winter">
-                <label for="winter">winterwear</label>
+                <label for="winter">Winterwear</label>
+            </div>
+            <div style="display: flex;width: 100%;">
+                <input type="checkbox" name="jacket" id="jacket">
+                <label for="jacket">Jacket</label>
             </div>
 
         </div>
@@ -86,59 +90,40 @@
                 <a href="p1lisa.html"><img src="images/p1.png" alt="lisa" style="width: 100%;"></a>
 
                 <div>
-                    <center><a href="p1lisa.html" style="text-decoration: none;color: black;"><span style="font-size: 20px;">JACKET</span></a></center>
+                    <center><a href="p1lisa.html"><span >JACKET</span></a></center>
 
                 </div>
             </div>
             <div class="devmain">
-                <img src="DEVS/IMG_3460.jpg" alt="ADNAN" style="width: 100%;">
+                <img src="images/p2.png" alt="ADNAN" style="width: 100%;">
                 <div>
-                    <span>ADNAN QURESHI</span>
+                    <center><span>HOODIE</span></center>
                 </div>
             </div>
             <div class="devmain">
-                <img src="DEVS/IMG_3460.jpg" alt="ADNAN" style="width: 100%;">
+                <img src="images/p3.png" alt="ADNAN" style="width: 100%;">
                 <div>
-                    <span>ADNAN QURESHI</span>
-                </div>
-            </div>
-            <div class="devmain">
-                <img src="DEVS/IMG_3460.jpg" alt="ADNAN" style="width: 100%;">
-                <div>
-                    <span>ADNAN QURESHI</span>
-                </div>
-            </div>
-            <div class="devmain">
-                <img src="DEVS/IMG_3460.jpg" alt="ADNAN" style="width: 100%;">
-                <div>
-                    <span>ADNAN QURESHI</span>
-                </div>
-            </div>
-            <div class="devmain">
-                <img src="DEVS/IMG_3460.jpg" alt="ADNAN" style="width: 100%;">
-                <div>
-                    <span>ADNAN QURESHI</span>
-                </div>
-            </div>
-            <div class="devmain">
-                <img src="DEVS/IMG_3460.jpg" alt="ADNAN" style="width: 100%;">
-                <div>
-                    <span>ADNAN QURESHI</span>
-                </div>
-            </div>
-            <div class="devmain">
-                <img src="DEVS/IMG_3460.jpg" alt="ADNAN" style="width: 100%;">
-                <div>
-                    <span>ADNAN QURESHI</span>
+                    <center><span>Designer Kurta</span></center>
                 </div>
             </div>
         </div>
     </div>
-
-
+<center>
+    <div>
+        <canvas id="canvas1" width="200" height="100"></canvas>
+    </div>
+</center>   
 
 
     <script src="navigation.js" defer></script>
+    <script>
+        const canvas = document.getElementById("canvas1");
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "Green";
+
+    ctx.font = "30px Arial";
+    ctx.fillText("SAVE EARTH", 10, 50);
+    </script>
 
 </body>
 
