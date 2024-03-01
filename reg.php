@@ -16,14 +16,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $pass=$_POST["pp"];
     $cp=$_POST["cpp"];
     if($pass==$cp){
-        $sql="INSERT INTO `userdata` (`sno`, `fname`, `lname`, `gender`, `contact`, `email`, `uname`, `pass`) VALUES (NULL, '$uname', '$lname', '$gen', $phone, '$emm', '$usname', '$pass')";
+        $sql="INSERT INTO `userdata` (`fname`, `lname`, `gender`, `contact`, `email`, `uname`, `pass`) VALUES ('$uname', '$lname', '$gen', $phone, '$emm', '$usname', '$pass')";
         $result= mysqli_query($conn,$sql);
 
 }
-
-
-
-
 }
 
 
