@@ -44,7 +44,6 @@
             </div>
         </ul>
     </div>
-    <audio src="entry.mp3" type="audio/mp3" autoplay loop>1</audio>
     <div class="center-box">
         <h1 style="color: #2b6734;">Contact Us</h1>
         <h2 style="color: #2b6734;">We’d love to hear from you!</h2>
@@ -117,7 +116,9 @@
             alert("An unknown error occurred.");
             break;
            }
-        }        </script> 
+        }        
+        </script> 
+
   </div>
 
 <script type="text/javascript">
@@ -131,8 +132,49 @@
     s0.parentNode.insertBefore(s1,s0);
     })();
     </script>
+    
 
 
+
+
+    <!--Test-->
+    <div id="locationDisplay"></div>
+    <button onclick="getLocation()">Get Location</button>
+    
+    <script>
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+          document.getElementById("locationDisplay").innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+  
+      function showPosition(position) {
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+        document.getElementById("locationDisplay").innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
+      }
+  
+      function showError(error) {
+        switch(error.code) {
+          case error.PERMISSION_DENIED:
+            document.getElementById("locationDisplay").innerHTML = "User denied the request for Geolocation.";
+            break;
+          case error.POSITION_UNAVAILABLE:
+            document.getElementById("locationDisplay").innerHTML = "Location information is unavailable.";
+            break;
+          case error.TIMEOUT:
+            document.getElementById("locationDisplay").innerHTML = "The request to get user location timed out.";
+            break;
+          case error.UNKNOWN_ERROR:
+            document.getElementById("locationDisplay").innerHTML = "An unknown error occurred.";
+            break;
+        }
+      }
+    </script>
+
+    <!--Test Ends-->
     <script src="navigation.js" defer></script>
     
 </body>
