@@ -14,12 +14,14 @@ body{
   }
 
   .devhed{
+    font-family: 'Lexend', sans-serif;
     font-size: 50px;
-    background-color: white;
+    background-color: #e7e5dba2;
     border-radius: 20px;
     padding: 20px;
   }
   .devcont{
+    font-family: 'Lexend', sans-serif;
     margin-top: 10vh;
     display: flex;
     justify-content: space-evenly;
