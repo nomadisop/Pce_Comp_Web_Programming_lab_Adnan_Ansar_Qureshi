@@ -18,6 +18,8 @@ body .navbar{
   box-shadow: 23px 4px 9px 6px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
 }
+
+/*Links left side of search bar in navigation bar*/
 .navbar .cont1{
   list-style: none;
   display: flex;
@@ -29,15 +31,16 @@ body .navbar{
   font-weight: bolder;
   text-decoration: underline;
 }
+/*Hover effect */
 .cont1 .home a:hover{
   color: white;
   transform: none;
 }
-
+/*Main logo on navigation bar*/
 .logo{
   height:10vh;
 }
-
+/*Social Media icons on navigation bar*/
 .icons{
   margin-top: 10vh;
 }
@@ -51,6 +54,7 @@ body .navbar{
 .navbar ul li{
   margin: 0px 10px;
 }
+/*Links right side of search bar in navigation bar*/
 .cont2 {
   list-style:none;
   display: flex;
@@ -66,7 +70,7 @@ body .navbar{
 .cont1 .logo{
   height: 9vh;
 }
-
+/*Social media hover effect*/
 .cont2 a:hover img {
   transform: scale(1.2);
 }
@@ -89,11 +93,12 @@ body{
     background-size:cover;
     background-repeat: no-repeat;
     flex-direction: column;
-    background-image: url(images/temporary.jpg);
+    background-image: url(images/temporary.jpg);   /*Computer background of section 1*/
     background-attachment: fixed;
     background-position: center;
     margin: 0%;
   }
+  /*Styling for header in section1*/
   .section_1 h1{
     height: 100%;
     color: white;
@@ -102,6 +107,7 @@ body{
     font-size: 4.5rem;
     font-weight: 600;
   }
+  /*Styling for paragraph in section1*/
   .section_1 p{
     color: white;
     max-width: 600px;
@@ -110,6 +116,7 @@ body{
     margin-bottom: 2rem;
     font-size: 1.2rem;
   }
+  /*Styling for form in section1*/
   .section_1 form{
     width: 100%;
     max-width: 350px;
@@ -123,6 +130,7 @@ body{
     border: 1px solid white;
     border-radius: 5rem;
   }
+  /*Styling for form inputs in section1*/
   .section_1 input{
     width: 100%;
     border: none;
@@ -166,7 +174,7 @@ body{
     text-align: center;
     overflow: hidden;
   }
-
+/*Styling for section2*/
   .section_2 {
     top: 6vh;
     margin-bottom: 6vh;
@@ -244,7 +252,7 @@ body{
     margin-left: 0px;
     border-radius: 10px;
   }
-
+/*LOADING EFECT ON PAGE*/
   #loading-overlay {
     position: fixed;
     top: 0;
@@ -275,6 +283,7 @@ body{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+/*End of loading effect and startion of media query */
 
 @media screen and (max-width: 860px) {
  .section_2{
@@ -392,6 +401,8 @@ body{
   color: rgb(0, 0, 255);
   font-family: 'Courier New', Courier, monospace;
 }
+
+/*Footer Responsiveness*/
 @media(max-width: 948px){
   .footer{
     padding-left: 30px;
@@ -436,3 +447,4 @@ body{
     width: 100%;
   }
 }
+/*End of Footer Responsiveness*/
