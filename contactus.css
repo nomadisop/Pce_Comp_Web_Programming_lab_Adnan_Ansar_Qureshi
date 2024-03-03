@@ -141,12 +141,13 @@ body .navbar{
 
 .center-box {
     width: 100%;
-    height: 500px;
-    background-color: #e7e5db;
-    margin: 50px auto;
+    height: 300px;
+    background-color: #e7e5dba2;
+    margin: 75px auto;
     text-align: center;
     font-family: 'Lexend', sans-serif;
 }
+
 
 .column {
     width: 33.33%;
@@ -156,10 +157,10 @@ body .navbar{
     padding: 20px;
 }
 
-.maps{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+.box{
+    background-color: #e7e5dba2;
+    font-family: 'Lexend', sans-serif;
+    text-align: center;
 }
 
 .ad{
