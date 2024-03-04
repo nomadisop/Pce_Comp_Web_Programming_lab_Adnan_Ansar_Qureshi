@@ -2,6 +2,9 @@
 session_start();
 
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!=true){
+    
+    sleep(5);
+    echo "<html><head></head><body><script>alert('Please login first');</script></body></html>";
     header("location: index.html");
     exit;
 }

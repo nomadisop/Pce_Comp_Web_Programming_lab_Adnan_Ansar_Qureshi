@@ -7,7 +7,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!=true){
 }
 session_unset();
 session_destroy();
-header("location index.html");
+header("location: index.html");
 
 
 
