@@ -6,7 +6,7 @@ function validateForm(){
     var username = document.form.uun.value;
 
     if(dotPosition+2>=email.length){
-        alert("Please Enter valide Email ID.");
+        alert("Please Enter valid Email ID.");
         return false;
     }
     else{

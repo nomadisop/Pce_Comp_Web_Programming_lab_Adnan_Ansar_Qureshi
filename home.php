@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!=true){
+    header("location: index.html");
+    exit;
+}
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,6 +69,18 @@
         </div>
         <ul style="padding-left: 0;max-width:fit-content;">
             <div class="cont2">
+                <?php 
+                
+                if($_SESSION["loggedin"]==true){
+                    echo "
+                    <form action='logout.php'>
+                    <button value='submit' >Logout</button>
+                    
+                    </form>
+                    ";
+                }
+                
+                ?>
                 <li class="home"><a href="Aboutus.html">About</a></li>
                 <li class="team"><a href="contactus.html">Contact</a></li>
                 <li class="home"><a href="#"><img src="images/ins.png" alt="insta" style="height: 3vh;"></a></li>
@@ -63,6 +89,7 @@
             </div>
         </ul>
     </div>
+    <header style="background-color:grey;font-size:30px;"><center>Welcome <?php echo $_SESSION["username"] ?></center> </header>
     <div class="vidcnt">
         <center>
             <video src="Green Fashion - Sustainable clothing at UNEA.mp4" style="width:80%" 
