@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!=true){
+    
+    echo "<html><head></head><body><script>alert('Please login first');</script></body></html>";
+    header("location: index.html");
+    exit;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,29 +83,31 @@
     </div>
         <ul style="padding-left: 0;max-width:fit-content;">
             <div class="cont2">
-                <li class="home"><a href="#">About</a></li>
-                <li class="team"><a href="#">Contact</a></li>
+                <li class="home"><a href="Aboutus.html">About</a></li>
+                <li class="team"><a href="contactus.html">Contact</a></li>
                 <li class="home"><a href="#"><img src="images/ins.png" alt="insta" style="height: 3vh;"></a></li>
                 <li class="team"><a href="#"><img src="images/x.png" alt="twitter" style="height:3vh;"></a></li>
                 <li class="home"><a href="#"><img src="images/fb.png" alt="facebook" style="height: 3vh;"></a></li>
             </div>
         </ul>
     </div>
+    <header style="background-color:grey;font-size:30px;"><center>Welcome <?php echo $_SESSION["username"] ?></center> </header>
     <div style="display: flex;justify-content: center;align-items: center;">
     <div class="main-cnt">
         <div  class="pi">
-            <img src="images/p2.png" alt="Image" style="width:100%;height: 100%;">
+            <img src="images/p3.png" alt="Image" style="width:100%;height: 100%;">
         </div>
         <div class="right">
             <div class="pn">
-                <h1 style="text-align: center;">PREMIUM HOODIE</h1>
+                <h1 style="text-align: center;">Designer Kurta</h1>
             </div>
             <div class="pd"> 
-                <span style="font-size:1rem;margin-right: 2vb;"><s style="height: 50;">&#8377;4500</s></span><span style="font-size: 2rem;">&#8377;4200</span>
+                <span style="font-size:1rem;margin-right: 2vb;"><s style="height: 50;">&#8377;9999</s></span><span style="font-size: 2rem;">&#8377;9000</span>
                 <div>
                 <label for="color">COLOR:</label>
                 <select name="color" id="color">
                     <option value="Red">BLACK</option>
+                    <option value="Green">GREEN</option>
                 </select>
                 </div>
                 <div style="margin-top: 2vh;" class="size">
@@ -134,7 +147,7 @@
                 <div class="btns">
                 <button class="btn2">Add to Cart</button>
                 <button class="btn2">Buy Now</button>
-            </div>
+                 </div>
             </div>
         </div>
     </div>

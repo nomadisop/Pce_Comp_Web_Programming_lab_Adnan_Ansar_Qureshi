@@ -1,9 +1,6 @@
 <?php
 session_start();
-
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!=true){
-    
-    sleep(5);
     echo "<html><head></head><body><script>alert('Please login first');</script></body></html>";
     header("location: index.html");
     exit;
@@ -56,8 +53,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!=true){
             <div class="cont1">
                 <li class="logo"><img src="images/GREEN THREADS.png" alt="brandlogo"
                         style="height: 100%;border-radius: 20px;"></li>
-                <li class="home"><a href="#">Home</a></li>
-                <li class="team"><a href="#">Shop Now</a></li>
+                <li class="home"><a href="landing_page.html">Home</a></li>
+                <li class="team"><a href="home.php">Shop Now</a></li>
             </div>
         </ul>
         <div class="search_box">
@@ -117,23 +114,26 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!=true){
         </div>
         <div class="products">
             <div class="devmain">
-                <a href="p1lisa.html"><img src="images/p1.png" alt="lisa" style="width: 100%;"></a>
+                <a href="p1lisa.php"><img src="images/p1.png" alt="lisa" style="width: 100%;"></a>
 
                 <div>
-                    <center><a href="p1lisa.html"><span >JACKET</span></a></center>
+                    <center><a href="p1lisa.php"><span >JACKET</span></a></center>
 
                 </div>
             </div>
             <div class="devmain">
-                <img src="images/p2.png" alt="ADNAN" style="width: 100%;">
+                <a href="p2.php">
+                <img src="images/p2.png" alt="ADNAN" style="width: 100%;"></a>
                 <div>
-                    <center><span>HOODIE</span></center>
+                    <center><a href="p2.php"><span>HOODIE</span></a></center>
                 </div>
             </div>
             <div class="devmain">
-                <img src="images/p3.png" alt="ADNAN" style="width: 100%;">
+                <a href="p3.php">
+                    <img src="images/p3.png" alt="ADNAN" style="width: 100%;">
+                    </a>
                 <div>
-                    <center><span>Designer Kurta</span></center>
+                    <center><a href="p3.php"><span>Designer Kurta</span></a></center>
                 </div>
             </div>
         </div>

@@ -1,4 +1,16 @@
-<!DOCTYPE html>
+<?php
+session_start();
+
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!=true){
+    
+    echo "<html><head></head><body><script>alert('Please login first');</script></body></html>";
+    header("location: index.html");
+    exit;
+}
+
+?>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -72,6 +84,17 @@
     </div>
         <ul style="padding-left: 0;max-width:fit-content;">
             <div class="cont2">
+            <?php 
+                if($_SESSION["loggedin"]==true){
+                    echo "
+                    <form action='logout.php'>
+                    <button value='submit' >Logout</button>
+                    
+                    </form>
+                    ";
+                }
+                
+                ?>
                 <li class="home"><a href="#">About</a></li>
                 <li class="team"><a href="#">Contact</a></li>
                 <li class="home"><a href="#"><img src="images/ins.png" alt="insta" style="height: 3vh;"></a></li>
@@ -80,7 +103,9 @@
             </div>
         </ul>
     </div>
+    <header style="background-color:grey;font-size:30px;"><center>Welcome <?php echo $_SESSION["username"] ?></center> </header>
     <div style="display: flex;justify-content: center;align-items: center;">
+    
     <div class="main-cnt">
         <div  class="pi">
             <img src="images/p1.png" alt="Image" style="width:100%;height: 100%;">
@@ -130,10 +155,13 @@
                         Material: Cotton
                         Machine Wash
                     </span>
-                </div>
+                
                 <div class="btns">
+                    <center>
                 <button class="btn2">Add to Cart</button>
                 <button class="btn2">Buy Now</button>
+                </center>
+                </div>
             </div>
             </div>
         </div>
