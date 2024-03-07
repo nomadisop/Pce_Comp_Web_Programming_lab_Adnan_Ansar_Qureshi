@@ -10,8 +10,23 @@ body{
     border-style: solid;
     text-align: center;
 }
-
-
+.size{
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.desc{
+  padding: 5%;
+}
+@media screen and (max-width: 1001px) {
+  .desc{
+    font-size: 0.9rem;
+  }
+  .size label{
+    height: 10px;
+    font-size: 0.9rem;
+  }
+  
+}
   @media screen and (max-width: 480px) {
     .pi{
         width: 100%;
