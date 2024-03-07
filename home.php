@@ -133,7 +133,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!=true){
                     <img src="images/p3.png" alt="ADNAN" style="width: 100%;">
                     </a>
                 <div>
-                    <center><a href="p3.php"><span>Designer Kurta</span></a></center>
+                    <center><a href="krunker.io"><span>Designer Kurta</span></a></center>
                 </div>
             </div>
         </div>
