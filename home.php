@@ -81,6 +81,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!=true){
                 }
                 
                 ?>
+                <li class="home"><a href="cart.html">Cart</a></li>
                 <li class="home"><a href="Aboutus.html">About</a></li>
                 <li class="team"><a href="contactus.html">Contact</a></li>
                 <li class="home"><a href="#"><img src="images/ins.png" alt="insta" style="height: 3vh;"></a></li>
