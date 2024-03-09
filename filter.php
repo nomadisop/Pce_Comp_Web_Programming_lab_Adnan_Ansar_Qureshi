@@ -13,7 +13,8 @@ $conn= mysqli_connect($server,$username,$password,$database);
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
-
+$quantity=2;
+$cat=$_POST['category'];
 ?>
 
 
@@ -61,7 +62,8 @@ $conn= mysqli_connect($server,$username,$password,$database);
             <div class="cont1">
                 <li class="logo"><img src="images/GREEN THREADS.png" alt="brandlogo"
                         style="height: 100%;border-radius: 20px;"></li>
-                <li class="home"><a href="#">Home</a></li>
+                <li class="home"><a href="landing_page.html">Home</a></li>
+                <li class="team"><a href="home.php">Shop Now</a></li>
             </div>
         </ul>
         <div class="search_box">
@@ -121,6 +123,7 @@ $conn= mysqli_connect($server,$username,$password,$database);
             </div>
             <button
                 type="submit"
+                class="btn btn-primary"
             >
                 Submit
             </button>
@@ -134,7 +137,12 @@ $conn= mysqli_connect($server,$username,$password,$database);
         </div>
         <div class="products">
     <?php
-    $query = "SELECT * FROM `products`";
+    
+    if($cat!=0){
+    $query = "SELECT * FROM `products` where category='$cat';";}
+    else{
+        $query = "SELECT * FROM `products`;";
+    }
     $result = mysqli_query($conn, $query);
     while ($row = mysqli_fetch_array($result)) {
     ?>
@@ -142,32 +150,16 @@ $conn= mysqli_connect($server,$username,$password,$database);
             <a href="<?php echo $row['plink'];?>"><img src='images/<?php echo $row['location']; ?>' alt="image" style="width: 100%"></a>
 
             <div>
-                <center><span><?php echo $row['name']; ?></span></center>
-                <center><span>PRICE:<?php echo $row['price']; ?></span></center>
-                <?php $pid=$row['id']?>
+                <center><span><?php echo $row['name']; ?>
+                        <?php echo $row['price']; ?></span></center>
             </div>
         </div>
     <?php
     }
     ?>
-        </div>
+</div>
+
     </div>
-<center>
-    <div>
-        <canvas id="canvas1" width="200" height="100"></canvas>
-    </div>
-</center>   
-
-
-    <script src="navigation.js" defer></script>
-    <script>
-        const canvas = document.getElementById("canvas1");
-        const ctx = canvas.getContext("2d");
-        ctx.fillStyle = "Green";
-
-    ctx.font = "30px Arial";
-    ctx.fillText("SAVE EARTH", 10, 50);
-    </script>
 
 </body>
 

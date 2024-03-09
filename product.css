@@ -13,6 +13,9 @@ body{
 .size{
   padding-left: 2%;
   padding-right: 2%;
+  display:inline-flex;
+  max-width: 200px;
+  
 }
 .desc{
   padding: 5%;
@@ -22,12 +25,12 @@ body{
     font-size: 0.9rem;
   }
   .size label{
-    height: 10px;
     font-size: 0.9rem;
   }
   
 }
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 580px) {
     .pi{
         width: 100%;
         border-bottom: solid;
@@ -71,7 +74,7 @@ body{
 
 
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 580px) {
 
     .main-cnt{
         display: flex;

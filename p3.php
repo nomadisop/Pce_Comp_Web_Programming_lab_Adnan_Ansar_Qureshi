@@ -7,6 +7,21 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!=true){
     header("location: index.html");
     exit;
 }
+$server="localhost";
+$username="root";
+$password="";
+$database="pr1";
+$conn= mysqli_connect($server,$username,$password,$database);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+$pid=3;
+
+$query = "SELECT * FROM `products` where id=$pid";
+$result = mysqli_query($conn, $query);
+$row=mysqli_fetch_array($result);
+
+
 
 ?>
 <!DOCTYPE html>
@@ -69,8 +84,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!=true){
         <ul>
             <div class="cont1">
                 <li class="logo"><img src="images/GREEN THREADS.png" alt="brandlogo" style="height: 100%;border-radius: 20px;"></li>
-                <li class="home"><a href="#">Home</a></li>
-                <li class="team"><a href="#">Shop Now</a></li>
+                <li class="home"><a href="home.php">Home</a></li>
             </div>
         </ul>
     <div class="search_box">
@@ -95,7 +109,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!=true){
     <div style="display: flex;justify-content: center;align-items: center;">
     <div class="main-cnt">
         <div  class="pi">
-            <img src="images/p3.png" alt="Image" style="width:100%;height: 100%;">
+            <img src="images/<?php echo $row['location']?>" alt="Image" style="width:100%;height: 100%;">
         </div>
         <div class="right">
             <div class="pn">
@@ -111,43 +125,41 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!=true){
                 </select>
                 </div>
                 <div style="margin-top: 2vh;" class="size">
-                    <span style="margin-top: 1VH;">SIZE:</span>
+                    <span style="margin-top: 1VH;margin-right:2px">SIZE:</span>
                     <label>
                         <input type="radio" id="small" name="size" value="small">
-                        <label for="small" class="size-label">Small</label>
+                        <label for="small" class="size-label">S</label>
                       </label>
                   
                       <label>
                         <input type="radio" id="medium" name="size" value="medium">
-                        <label for="medium" class="size-label">Medium</label>
+                        <label for="medium" class="size-label">M</label>
                       </label>
                   
                       <label>
                         <input type="radio" id="large" name="size" value="large">
-                        <label for="large" class="size-label">Large</label>
+                        <label for="large" class="size-label">L</label>
                       </label>
                   
                       <label>
                         <input type="radio" id="xlarge" name="size" value="xlarge">
-                        <label for="xlarge" class="size-label">X-Large</label>
+                        <label for="xlarge" class="size-label">XL</label>
                       </label>
                   
                 </div>
+               
                 <div class="desc" style="text-align: left;">
-                    <span style="text-align:left;">Black solid cropped corduroy bomber jacket, has a hood, 2 pockets, zip closure, long sleeves, straight hem, and unlined...
-                        <br>
-                        Size & Fit
-                        The model (height 5'8") is wearing a size S
-                        <br>
-                        Material & Care
-                        Material: Cotton
-                        Machine Wash
-                    </span>
-                </div>
+                    <span style="text-align:left;">
+                    <?php 
+                        echo $row["dsc"];
+                    ?>
+                
                 <div class="btns">
-                <button class="btn2">Add to Cart</button>
-                <button class="btn2">Buy Now</button>
-                 </div>
+                    <center>
+                <button class="btn2" style="margin-top:20px">Add to Cart</button>
+                </center>
+                </div>
+            </div>
             </div>
         </div>
     </div>
