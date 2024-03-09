@@ -1,3 +1,26 @@
+<?php
+session_start();
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!=true){
+    echo "<html><head></head><body><script>alert('Please login first');</script></body></html>";
+    header("location: index.html");
+    exit;
+}
+
+$server="localhost";
+$username="root";
+$password="";
+$database="pr1";
+$conn= mysqli_connect($server,$username,$password,$database);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+$quantity=2;
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,32 +67,23 @@
                         <td>Subtotal</td>
                     </tr>
                 </thead>
+            <?php
+            $query="SELECT * FROM `products`;";
+            $result=mysqli_query($conn,$query);
+            $row=mysqli_fetch_array($result);
+            ?>
                 <tbody id="items">
                     <tr>
-                        <td><a href="#" style="text-decoration: none;color: black;"><span class="material-symbols-outlined">cancel</span></a></td>
-                        <td><img src="/images/p1.png" alt="image of product"></td>
-                        <td>Black solid cropped corduroy bomber jacket</td>
-                        <td>&#8377;6969</td>
-                        <td><input type="number" value="1"></td>
-                        <td>&#8377;6969</td>
+                        <td>Remove</td>
+                        <td><img src='images/<?php echo$row['location'];?>' alt="image"></td>
+                        <td><?php echo $row['name'];?></td>
+                        <td><?php echo $row['price'];?></td>
+                        <td><?php echo $quantity;?></td>
+                        <td><?php echo$quantity*$row['price']?></td>
                     </tr>
-                    <tr>
-                        <td><a href="#" style="text-decoration: none;color: black;"><span class="material-symbols-outlined">cancel</span></a></td>
-                        <td><img src="/images/p1.png" alt="image of product"></td>
-                        <td>Black solid cropped corduroy bomber jacket</td>
-                        <td>&#8377;6969</td>
-                        <td><input type="number" value="1"></td>
-                        <td>&#8377;6969</td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" style="text-decoration: none;color: black;"><span class="material-symbols-outlined">cancel</span></a></td>
-                        <td><img src="/images/p1.png" alt="image of product"></td>
-                        <td>Black solid cropped corduroy bomber jacket</td>
-                        <td>&#8377;6969</td>
-                        <td><input type="number" value="1"></td>
-                        <td>&#8377;6969</td>
-                    </tr>
+
                 </tbody>
+            
             </table>
         </div>
         

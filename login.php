@@ -5,6 +5,7 @@ $username="root";
 $password="";
 $database="pr1";
 $submit = $_POST['submit'];
+$flag=0;
 
 if(isset($submit)){
     $conn= mysqli_connect($server,$username,$password,$database);
@@ -27,7 +28,12 @@ if(isset($submit)){
         }
 
         else{
-            $showError="Invalid Credentials";
+            echo "<script>alert('Invalid Credentials');</script>";
+            sleep(5);
+            $flag=1;
+        }
+        if($flag==1){
+            header('location: index.html');
         }
 }
 
