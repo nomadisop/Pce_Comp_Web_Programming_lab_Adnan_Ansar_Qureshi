@@ -28,12 +28,8 @@ if(isset($submit)){
         }
 
         else{
-            echo "<script>alert('Invalid Credentials');</script>";
-            sleep(5);
-            $flag=1;
-        }
-        if($flag==1){
-            header('location: index.html');
+            echo "<script>alert('Invalid Credentials');
+            window.history.back();</script>";
         }
 }
 
