@@ -1,13 +1,7 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-    const cartItemsTable = document.getElementById('cart_items');
-
-    cartItems.forEach(item => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${item.name}</td>
-            <td>${item.price}</td>
-        `;
-        cartItemsTable.appendChild(row);
-    });
+document.addEventListener("DOMContentLoaded",function(){
+    const cart_logo = document.querySelector('.cart-logo');
+    const cart_container = document.querySelector('.cart-items-container');
+    cart_logo.addEventListener('click',function(){
+        cart_container.classList.toggle('show');
+    })
 });

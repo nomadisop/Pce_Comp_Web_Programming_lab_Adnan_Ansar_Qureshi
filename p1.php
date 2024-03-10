@@ -184,6 +184,11 @@ $pid=1;
         </table>
         </center>
     </div>
+    <div class="cart-logo">
+        HELLO
+        <!-- You can also add a badge to display the number of items in the cart -->
+        <span class="badge">0</span>
+    </div>
     <script src="navigation.js" defer></script>
     
 </body>
