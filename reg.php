@@ -29,7 +29,8 @@ if(isset($submit)){
             window.history.back();</script>";
         }
         else{
-        $sql="INSERT INTO `userdata` (`fname`, `lname`, `gender`, `contact`, `email`, `uname`, `pass`) VALUES ('$uname', '$lname', '$gen', $phone, '$emm', '$usname', '$pass')";
+            $hash=password_hash($pass,PASSWORD_DEFAULT);
+        $sql="INSERT INTO `userdata` (`fname`, `lname`, `gender`, `contact`, `email`, `uname`, `pass`) VALUES ('$uname', '$lname', '$gen', $phone, '$emm', '$usname', '$hash')";
         $result= mysqli_query($conn,$sql);
         
         echo '<head>

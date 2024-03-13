@@ -15,16 +15,17 @@ if(isset($submit)){
     $uname=$_POST["uname"];
     $pass=$_POST["pass"];
 
-    $sql="select * from userdata where uname='$uname' and pass='$pass'";
+    $sql="select * from userdata where uname='$uname'";
         $result=mysqli_query($conn,$sql);
         $num=mysqli_num_rows($result);
-        if($num==1){
+        $arr=mysqli_fetch_array($result);
+        if(password_verify($pass,$arr['pass'])){
             $login=true;
             session_start();
             $_SESSION["loggedin"]=true;
             $_SESSION["username"]=$uname;
 
-            header("location: home.php");
+            header("location: view_page.php");
         }
 
         else{
