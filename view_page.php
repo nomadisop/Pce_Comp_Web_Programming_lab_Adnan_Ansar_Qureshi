@@ -117,7 +117,6 @@ $pid=1;
     echo $value . "<br>";
 }?></center> </header>
     <div style="display: flex;justify-content: center;align-items: center;">
-    <div class="main-cnt">
                 <?php
                 foreach($_SESSION['cart'] as $value){
     $query = "SELECT * FROM `products` where `id`=$value";
