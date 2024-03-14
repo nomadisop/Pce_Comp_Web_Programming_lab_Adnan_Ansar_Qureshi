@@ -1,12 +1,13 @@
 <?php
 session_start();
 
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!=true){
+if(!isset($_SESSION["loggedin"])){
     
     echo "<html><head></head><body><script>alert('Please login first');</script></body></html>";
     header("location: index.html");
     exit;
 }
+
 $server="localhost";
 $username="root";
 $password="";
@@ -112,62 +113,36 @@ $pid=1;
             </div>
         </ul>
     </div>
-    <header style="background-color:grey;font-size:30px;"><center>Welcome <?php echo $_SESSION["username"] ?></center> </header>
+    <header style="background-color:grey;font-size:30px;"><center>Welcome <?php echo $_SESSION["username"];foreach($_SESSION['cart'] as $value){
+    echo $value . "<br>";
+}?></center> </header>
     <div style="display: flex;justify-content: center;align-items: center;">
-    
     <div class="main-cnt">
-        <div  class="pi">
-            <img src="images/p1.png" alt="Image" style="width:100%;height: 100%;">
-        </div>
-        <div class="right">
-            <div class="pn">
-                <h1 style="text-align: center;">GreenThreads Signature JACKET</h1>
-            </div>
-            <div class="pd"> 
-                <span style="font-size:1rem;margin-right: 2vb;"><s style="height: 50;">&#8377;6969</s></span><span style="font-size: 2rem;">&#8377;6900</span>
-                <div>
-                <label for="color">COLOR:</label>
-                <select name="color" id="color">
-                    <option value="Red">BLACK</option>
-                </select>
-                </div>
-                <div style="margin-top: 2vh;" class="size">
-                    <span style="margin-top: 1VH;margin-right:2px">SIZE:</span>
-                    <label>
-                        <input type="radio" id="small" name="size" value="small">
-                        <label for="small" class="size-label">S</label>
-                      </label>
-                  
-                      <label>
-                        <input type="radio" id="medium" name="size" value="medium">
-                        <label for="medium" class="size-label">M</label>
-                      </label>
-                  
-                      <label>
-                        <input type="radio" id="large" name="size" value="large">
-                        <label for="large" class="size-label">L</label>
-                      </label>
-                  
-                      <label>
-                        <input type="radio" id="xlarge" name="size" value="xlarge">
-                        <label for="xlarge" class="size-label">XL</label>
-                      </label>
-                  
-                </div>
                 <?php
-                $query = "SELECT * FROM `products` where id=$pid";
-                $result = mysqli_query($conn, $query);
-                $row=mysqli_fetch_array($result);
-                ?>
-                <div class="desc" style="text-align: left;">
-                    <span style="text-align:left;">
-                    <?php 
-                        echo $row["dsc"];
-                    ?>
-                
+                foreach($_SESSION['cart'] as $value){
+    $query = "SELECT * FROM `products` where `id`=$value";
+    $result = mysqli_query($conn, $query);
+    while ($row = mysqli_fetch_array($result)) {
+    ?>
+        <div class="devmain">
+            <a href="<?php echo $row['plink'];?>"><img src='images/<?php echo $row['location']; ?>' alt="image" style="width: 100%"></a>
+
+            <div>
+                <center><span><?php echo $row['name']; ?></span></center>
+                <center><span>PRICE:<?php echo $row['price']; ?></span></center>
+                <?php $pid=$row['id']?>
+            </div>
+        </div>
+    <?php
+    }}
+    ?>
+        </div>
+    </div>
                 <div class="btns">
                     <center>
-                <button class="btn2" style="margin-top:20px">Add to Cart</button>
+                <form action="add.php" method="post">
+                <button class="btn2" style="margin-top:20px" name="id" value='3'>Add to Cart</button>
+                </form>
                 </center>
                 </div>
             </div>
