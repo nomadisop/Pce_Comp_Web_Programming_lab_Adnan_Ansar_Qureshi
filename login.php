@@ -24,8 +24,8 @@ if(isset($submit)){
             session_start();
             $_SESSION["loggedin"]=true;
             $_SESSION["username"]=$uname;
-            $_SESSION['cart']=array('2','1');
-            header("location: view_page.php");
+            $_SESSION['cart']=array();
+            header("location: home.php");
         }
 
         else{
