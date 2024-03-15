@@ -73,17 +73,24 @@ $quantity=2;
             $row=mysqli_fetch_array($result);
             ?>
                 <tbody id="items">
-                    <tr>
-                        <td>Remove</td>
-                        <td><img src='images/<?php echo$row['location'];?>' alt="image"></td>
-                        <td><?php echo $row['name'];?></td>
-                        <td><?php echo $row['price'];?></td>
-                        <td><?php echo $quantity;?></td>
-                        <td><?php echo$quantity*$row['price']?></td>
-                    </tr>
-
-                </tbody>
-            
+                <?php
+                foreach($_SESSION['cart'] as $value){
+    $query = "SELECT * FROM `products` where `id`=$value";
+    $result = mysqli_query($conn, $query);
+    while ($row = mysqli_fetch_array($result)) {
+    ?>
+                <tr>
+                    <td class="remove"><a href="remove.php?pid=<?php echo $row['id']?>" style="text-decoration: none;color: black;" method='get'><span class="material-symbols-outlined">cancel</span></a></td>
+                    <td class="image"> <img src="images/<?php echo $row['location']; ?>" style="height:50px;"></td>
+                    <td><?php echo $row['name']; ?></td>
+                    <td><?php echo $row['price']; ?></td>
+                    <td><input type="number" value="1"></td>
+                    <td><?php echo $row['price']; ?></td>
+                </tr>
+            </tbody>
+            <?php
+    }}
+    ?>
             </table>
         </div>
         
