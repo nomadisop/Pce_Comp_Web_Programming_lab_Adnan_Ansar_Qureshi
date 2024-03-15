@@ -5,11 +5,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!=true){
     header("location: index.html");
     exit;
 }
-array_push($_SESSION['cart'],$_POST['id']);
-
-foreach($_SESSION['cart'] as $value){
-    echo $value;
+if (($key = array_search($_GET['pid'], $_SESSION['cart'])) !== false) {
+    echo $key;
+    unset($_SESSION['cart'][$key]);
 }
-echo "<script>alert('Item added to cart');
-        window.history.back();</script>";
+foreach($_SESSION['cart'] as $value){
+    echo $value . "<br>";}
+echo "<script>window.history.back();</script>";
 ?>

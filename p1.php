@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!=true){
+if(!isset($_SESSION["loggedin"])){
     
     echo "<html><head></head><body><script>alert('Please login first');</script></body></html>";
     header("location: index.html");
@@ -165,7 +165,9 @@ $pid=1;
                 
                 <div class="btns">
                     <center>
-                <button class="btn2" style="margin-top:20px">Add to Cart</button>
+                        <form action="add.php" method="post">
+                <button class="btn2" style="margin-top:20px" name='id' value="1">Add to Cart</button>
+                </form>
                 </center>
                 </div>
             </div>
@@ -185,11 +187,46 @@ $pid=1;
         </center>
     </div>
     <div class="cart-logo">
-        HELLO
-        <!-- You can also add a badge to display the number of items in the cart -->
+    <img src="images/cart-logo.png" alt="logo of cart">
+       
         <span class="badge">0</span>
     </div>
+    <div class="cart-items-container">
+        <table id="cart-table-template" >
+       
+            <thead>
+                <tr>
+                <td>remove</td>
+                <td>Image</td>
+                <td>Product</td>
+                <td>Price</td>
+                <td>Quantity</td>
+                <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+                foreach($_SESSION['cart'] as $value){
+    $query = "SELECT * FROM `products` where `id`=$value";
+    $result = mysqli_query($conn, $query);
+    while ($row = mysqli_fetch_array($result)) {
+    ?>
+                <tr>
+                    <td class="remove"><a href="remove.php?pid=<?php echo $row['id']?>" style="text-decoration: none;color: black;" method='get'><span class="material-symbols-outlined">cancel</span></a></td>
+                    <td class="image"> <img src="images/<?php echo $row['location']; ?>" style="height:50px;"></td>
+                    <td><?php echo $row['name']; ?></td>
+                    <td><?php echo $row['price']; ?></td>
+                    <td><input type="number" value="1"></td>
+                    <td><?php echo $row['price']; ?></td>
+                </tr>
+            </tbody>
+            <?php
+    }}
+    ?>
+        </table>
+      </div>
     <script src="navigation.js" defer></script>
+    <script src="cart.js" defer></script>
     
 </body>
 </html>

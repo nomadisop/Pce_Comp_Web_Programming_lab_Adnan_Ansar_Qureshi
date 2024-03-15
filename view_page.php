@@ -168,6 +168,7 @@ $pid=1;
     </div>
     <div class="cart-items-container">
         <table id="cart-table-template" >
+       
             <thead>
                 <tr>
                 <td>remove</td>
@@ -179,16 +180,24 @@ $pid=1;
                 </tr>
             </thead>
             <tbody>
+            <?php
+                foreach($_SESSION['cart'] as $value){
+    $query = "SELECT * FROM `products` where `id`=$value";
+    $result = mysqli_query($conn, $query);
+    while ($row = mysqli_fetch_array($result)) {
+    ?>
                 <tr>
-                    <td class="remove"><a href="#" style="text-decoration: none;color: black;"><span class="material-symbols-outlined">cancel</span></a></td>
-                    <td class="image"> <img src="" alt="image of product"></td>
-                    <td>Masta Jacket</td>
-                    <td>4000</td>
+                    <td class="remove"><a href="remove.php" style="text-decoration: none;color: black;"><span class="material-symbols-outlined">cancel</span></a></td>
+                    <td class="image"> <img src="images/<?php echo $row['location']; ?>" style="height:50px;"></td>
+                    <td><?php echo $row['name']; ?></td>
+                    <td><?php echo $row['price']; ?></td>
                     <td><input type="number" value="1"></td>
-                    <td>4000</td>
+                    <td><?php echo $row['price']; ?></td>
                 </tr>
             </tbody>
-            
+            <?php
+    }}
+    ?>
         </table>
       </div>
     <script src="navigation.js" defer></script>
