@@ -24,15 +24,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">  
     <link rel="icon" href="images/GREEN THREADS.png">
-    <title>Success!!</title>
+    <title>Login</title>
 </head>
 <body>
     <div class="navbar">
         <ul>
             <div class="cont1">
                 <li class="logo"><img src="images/GREEN THREADS.png" alt="brandlogo" style="height: 100%;border-radius: 20px;"></li>
-                <li class="home imgg "><a href="#">Home</a></li>
-                <li class="team imgg"><a href="#">Shop Now</a></li>
+                <li class="home"><a href="index.html">Home</a></li>
+                <li class="shopNow"><a href="#">Shop Now</a></li>
             </div>
         </ul>
     <div class="search_box">
@@ -45,45 +45,53 @@
     </div>
         <ul style="padding-left: 0;max-width:fit-content;">
             <div class="cont2">
-                <li class="imgg"><a href="Aboutus.html">About</a></li>
-                <li class="imgg"><a href="contactus.html">Contact</a></li>
-                <li class="imgg"><a href="#"><img src="images/ins.png" alt="insta" style="height: 3vh;"></a></li>
-                <li class="imgg"><a href="#"><img src="images/x.png" alt="twitter" style="height:3vh;"></a></li>
-                <li class="imgg"><a href="#"><img src="images/fb.png" alt="facebook" style="height: 3vh;"></a></li>
-                
-                    <div class="socials mm">
-                   
-                    <select name="menu" id="menu" style="font-size: 20px;color:white" onchange="goToPage(this)">
-                    <option value="#" selected>Menu</option>
-                    <option value="index.html">Home</option>
-                    <option value="Home.html">Shop</option>
-                    <option value="Aboutus.html">About us</option>
-                    <option value="contactus.html">Contact us</option>
-                    <option value="socials.html">Socials</option>
-                    </select>
-                    </div>
-                
+                <li class="about"><a href="Aboutus.html">About</a></li>
+                <li class="contact"><a href="contactus.html">Contact</a></li>
+                <li class="insta"><a href="#"><img src="images/ins.png" alt="insta" style="height: 3vh;"></a></li>
+                <li class="twitter"><a href="#"><img src="images/x.png" alt="twitter" style="height:3vh;"></a></li>
+                <li class="facebook"><a href="#"><img src="images/fb.png" alt="facebook" style="height: 3vh;"></a></li>
             </div>
         </ul>
     </div>
 
-    <div style="justify-content: center;align-items: center;display: flex;margin-top: 250px;flex-direction: column;">
-        <div style="background-color: white;padding: 50px;">
-        <span style="display: block;">YOU HAVE BEEN REGISTERED SUCCESSFULLY!!!!!</span>
-        <span >GO To Login Page --></span><form action="index.html"><input type="submit" value="Redirect"></form>
+    <section style="margin: 3vh;">
+        <div class="contmain" style="display: flex;border-radius: 20px;cursor: default;">
+        
+        <div class="content">
+            <h2>Welcome to Our Website </h2>
+            <p>Here we Will sell to you used clothes that are made in some factory in china in the name of eco friendly brand</p>
         </div>
-    </div>
+    
+        <div class="lg-cnt" style="text-align: center;" >
+            <div style="display:block;" >
+                <div style="display: block;"><h2 style="border-bottom: solid;width:auto;border-color: white;cursor:default; color: white ;">Login</h2></div>
+            </div>
+            <form class="logfrm" method="post" action="login.php">
+            
+              <div class="frm-grp">
+                <img src="images/user_logo1.png" width="18vb" style="position: absolute;">
+                <input type="text" id="username" class="lginp" placeholder="Username" required name="uname">
+              </div>
+              <div class="frm-grp"> 
+                <img src="images/lock_logo1.png" width="18vb" style="position: absolute;overflow: hidden;">
+                <input type="password" id="password" class="lginp"  placeholder="Password" required name="pass">
+              </div>
+                
+              <div class="form-group" style="text-align: start;">
+            <a href="reg.html" class="not_user">Not a User?</a>
+                <center>
+                <input type="submit" class="smb" value="Login" name="submit">
+                </center>
+              </div>
+            </form>
+        </div>
+        </div>
 
 
+    </section>
+    
+    
 
     <script src="navigation.js" defer></script>
-    <script>
-        function goToPage(select) {
-          var url = select.options[select.selectedIndex].value;
-          if (url) {
-            window.location = url;
-          }
-        }
-    </script>
 </body>
 </html>

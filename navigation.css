@@ -127,3 +127,10 @@ body .navbar{
 .search_box button:disabled {
     cursor: default;
 }
+.active{
+    text-decoration: underline;
+    text-shadow: 0.3px 0.4px white;
+    color: black;
+    transform: scale(1);
+    font-weight: bold;
+}
