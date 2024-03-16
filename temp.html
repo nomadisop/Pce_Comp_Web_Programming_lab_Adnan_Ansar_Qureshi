@@ -25,7 +25,7 @@ $quantity=2;
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="temp.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Cart</title>
@@ -81,17 +81,32 @@ $quantity=2;
     ?>
                 <tr>
                     <td class="remove"><a href="remove.php?pid=<?php echo $row['id']?>" style="text-decoration: none;color: black;" method='get'><span class="material-symbols-outlined">cancel</span></a></td>
-                    <td class="image"> <img src="images/<?php echo $row['location']; ?>" style="height:50px;"></td>
-                    <td><?php echo $row['name']; ?></td>
-                    <td class="amount"><?php echo $row['price']; ?></td>
+                    <td class="image"> <img src="images/p1.png" style="height:60px;"></td>
+                    <td>boht acha product hai...</td>
+                    <td class="amount">$600</td>
                     <td><input type="number" value="1" class="quantity" min="1"></td>
-                    <td class="subtotal"><?php echo $row['price']; ?></td>
+                    <td class="subtotal">$600</td>
                 </tr>
-            
+                <tr>
+                    <td class="remove"><a href="remove.php?pid=<?php echo $row['id']?>" style="text-decoration: none;color: black;" method='get'><span class="material-symbols-outlined">cancel</span></a></td>
+                    <td class="image"> <img src="images/p1.png" style="height:50px;"></td>
+                    <td>boht acha product hai...</td>
+                    <td class="amount">$600</td>
+                    <td><input type="number" value="1" class="quantity" min="1"></td>
+                    <td class="subtotal">$600</td>
+                </tr>
+                <tr>
+                    <td class="remove"><a href="remove.php?pid=<?php echo $row['id']?>" style="text-decoration: none;color: black;" method='get'><span class="material-symbols-outlined">cancel</span></a></td>
+                    <td class="image"> <img src="images/p1.png" style="height:50px;"></td>
+                    <td>boht acha product hai...</td>
+                    <td class="amount">$600</td>
+                    <td><input type="number" value="1" class="quantity" min="1"></td>
+                    <td class="subtotal">$600</td>
+                </tr>
+            </tbody>
             <?php
     }}
     ?>
-            </tbody>
             </table>
             <div class="containerLast">
                 CheckOut
