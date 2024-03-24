@@ -11,14 +11,43 @@ if(isset($submit)){
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
-    $uname=$_POST["uname"];
-    $lname=$_POST["lname"];
-    $gen=$_POST["gender"];
-    $phone=$_POST["phn"];
-    $emm=$_POST["emm"];
-    $usname=$_POST["uun"];
-    $pass=$_POST["pp"];
-    $cp=$_POST["cpp"];
+    function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+      }
+    $uname=test_input($_POST["uname"]);
+    $lname=test_input($_POST["lname"]);
+    $gen=test_input($_POST["gender"]);
+    $phone=test_input($_POST["phn"]);
+    $emm=test_input($_POST["emm"]);
+    $usname=test_input($_POST["uun"]);
+    $pass=test_input($_POST["pp"]);
+    $cp=test_input($_POST["cpp"]);
+
+
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     if($pass==$cp){
         $sql2="SELECT * FROM userdata WHERE uname='$usname'";
         $result2= mysqli_query($conn,$sql2);

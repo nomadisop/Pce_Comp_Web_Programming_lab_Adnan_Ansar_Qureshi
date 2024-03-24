@@ -1,4 +1,3 @@
-Pleade Update Readme file... TEMPLATE
 
 #Eco Freindly Clothing Marketplace
 

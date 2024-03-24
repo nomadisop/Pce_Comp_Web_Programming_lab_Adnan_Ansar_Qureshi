@@ -29,6 +29,14 @@ $quantity=2;
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Cart</title>
+    <style>body{
+  background-size:cover;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0%;
+}</style>
 </head>
 <body>
     <div class="navbar">
@@ -41,8 +49,8 @@ $quantity=2;
     
         <ul style="padding-left: 0;max-width:fit-content;">
             <div class="cont2">
-                <li class="about"><a href="Aboutus.html">Cart(current)</a></li>
-                <li class="about"><a href="Aboutus.html">About</a></li>
+                <li class="about"><a href="#">Cart(current)</a></li>
+                <li class="about"><a href="home.php">Home</a></li>
                 <li class="about"><a href="Aboutus.html">About</a></li>
                 <li class="contact"><a href="contactus.html">Contact</a></li>
                 <li class="insta"><a href="#"><img src="images/ins.png" alt="insta" style="height: 3vh;"></a></li>
@@ -74,10 +82,12 @@ $quantity=2;
             ?>
                 <tbody id="items">
                 <?php
+                $_SESSION['total']=0;
                 foreach($_SESSION['cart'] as $value){
     $query = "SELECT * FROM `products` where `id`=$value";
     $result = mysqli_query($conn, $query);
     while ($row = mysqli_fetch_array($result)) {
+        $_SESSION['total']=$_SESSION['total']+$row['price'];
     ?>
                 <tr>
                     <td class="remove"><a href="remove.php?pid=<?php echo $row['id']?>" style="text-decoration: none;color: black;" method='get'><span class="material-symbols-outlined">cancel</span></a></td>
@@ -86,6 +96,7 @@ $quantity=2;
                     <td class="amount"><?php echo $row['price']; ?></td>
                     <td><input type="number" value="1" class="quantity" min="1"></td>
                     <td class="subtotal"><?php echo $row['price']; ?></td>
+                    
                 </tr>
             
             <?php
@@ -94,11 +105,25 @@ $quantity=2;
             </tbody>
             </table>
             <div class="containerLast">
-                CheckOut
+            
             </div>
         </div>
+        <?php
+        $totalprice="<script>console.log(totalprice);</script>;"
+        ?>
+       <form action="checkout.php">
+        <?php
+        echo $_SESSION['total'];?>
+        <div><button
+            type="submit"
+            class="btn btn-primary"
+        >
+            Checkout
+        </button>
+        </div>
+       </form>
         
-    </section>
+</section>
     <script src="cart.js"></script>
 </body>
 </html>
