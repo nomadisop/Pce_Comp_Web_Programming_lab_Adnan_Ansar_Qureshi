@@ -225,6 +225,21 @@ $pid=1;
     ?>
         </table>
       </div>
+      <script>
+        function toggleCartContainer() {
+        const cartContainer = document.querySelector('.cart-items-container');
+        if (cartContainer) {
+            cartContainer.classList.toggle('show');
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function(){
+        const cartLogo = document.querySelector('.cart-logo');
+        if (cartLogo) {
+            cartLogo.addEventListener('click', toggleCartContainer);
+        }
+    });
+      </script>
     <script src="navigation.js" defer></script>
     <script src="cart.js" defer></script>
     
