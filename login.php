@@ -1,17 +1,10 @@
 <?php
 
-$server="localhost";
-$username="root";
-$password="";
-$database="pr1";
+include 'connect.php';
 $submit = $_POST['submit'];
 $flag=0;
 
 if(isset($submit)){
-    $conn= mysqli_connect($server,$username,$password,$database);
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
     $uname=$_POST["uname"];
     $pass=$_POST["pass"];
 

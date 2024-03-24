@@ -1,13 +1,6 @@
 <?php
 session_start();
-$server="localhost";
-$username="root";
-$password="";
-$database="pr1";
-$conn= mysqli_connect($server,$username,$password,$database);
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
+include 'connect.php';
 
 $crnum=$_POST['card_number'];
 $cname=$_POST['name'];

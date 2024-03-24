@@ -1,16 +1,9 @@
 <?php 
-$server="localhost";
-$username="root";
-$password="";
-$database="pr1";
+include 'connect.php';
 $submit = $_POST['submit'];
 $num2=0;
 
 if(isset($submit)){
-    $conn= mysqli_connect($server,$username,$password,$database);
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
     function test_input($data) {
         $data = trim($data);
         $data = stripslashes($data);
