@@ -22,7 +22,7 @@ if(isset($submit)){
         }
 
         else{
-            echo "<script>alert('Invalid Credentials');
+            echo "<script>alert('Invalid username or password. Please double-check your credentials and try again.');
             window.history.back();</script>";
         }
 }
