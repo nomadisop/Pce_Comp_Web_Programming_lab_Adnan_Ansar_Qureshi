@@ -95,18 +95,10 @@ $quantity=2;
             <?php
     }}
     ?>
-            </tbody>
-            </table>
-            <div class="containerLast">
-            
-            </div>
-        </div>
+            <tr><td></td><td></td><td></td><td></td><td>TOTAL PRICE:</td><td><p class="containerLast"></p></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td><form action="checkout.php">
         <?php
-        $totalprice="<script>console.log(totalprice);</script>;"
-        ?>
-       <form action="checkout.php">
-        <?php
-        echo $_SESSION['total'];?>
+        $_SESSION['total'];?>
         <div><button
             type="submit"
             class="btn btn-primary"
@@ -114,7 +106,12 @@ $quantity=2;
             Checkout
         </button>
         </div>
-       </form>
+       </form></td></tr>
+            </tbody>
+            </table>
+            
+        </div>
+       
         
 </section>
     <script src="cart.js"></script>

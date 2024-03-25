@@ -19,28 +19,6 @@ if(isset($submit)){
     $pass=test_input($_POST["pp"]);
     $cp=test_input($_POST["cpp"]);
 
-
-
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     if($pass==$cp){
         $sql2="SELECT * FROM userdata WHERE uname='$usname'";
         $result2= mysqli_query($conn,$sql2);

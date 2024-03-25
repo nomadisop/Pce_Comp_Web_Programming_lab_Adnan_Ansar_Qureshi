@@ -92,8 +92,7 @@ include 'connect.php';
     <header style="background-color:grey;font-size:30px;"><center>Welcome <?php echo $_SESSION["username"] ?></center> </header>
     <div class="vidcnt">
         <center>
-            <video src="Green Fashion - Sustainable clothing at UNEA.mp4" style="width:80%" 
-                controls></video>
+            <video src="Green Fashion - Sustainable clothing at UNEA.mp4" style="width:80%" controls></video>
         </center>
     </div>
     <div style="display:flex;width: 100%;">
