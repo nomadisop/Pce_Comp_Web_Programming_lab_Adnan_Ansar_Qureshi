@@ -8,7 +8,7 @@ if(!isset($_SESSION["loggedin"])){
     exit;
 }
 include 'connect.php';
-$pid=2;
+$pid=4;
 ?>
 
 <html lang="en">
@@ -162,7 +162,7 @@ $pid=2;
                 <div class="btns">
                     <center>
                         <form action="add.php" method="post">
-                <button class="btn2" style="margin-top:20px" name='id' value="2">Add to Cart</button>
+                <button class="btn2" style="margin-top:20px" name='id' value="4">Add to Cart</button>
                 </form>
                 </center>
                 </div>

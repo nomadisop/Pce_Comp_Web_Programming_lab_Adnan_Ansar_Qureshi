@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!=true){
+if(!isset($_SESSION["loggedin"])){
     
     echo "<html><head></head><body><script>alert('Please login first');</script></body></html>";
     header("location: index.html");
@@ -9,15 +9,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!=true){
 }
 include 'connect.php';
 $pid=3;
-
-$query = "SELECT * FROM `products` where id=$pid";
-$result = mysqli_query($conn, $query);
-$row=mysqli_fetch_array($result);
-
-
-
 ?>
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -59,7 +52,7 @@ $row=mysqli_fetch_array($result);
           display: inline-block;
           border: 2px solid #c1a780;
           padding: 8px;
-          margin-right: 10px;
+          margin-right: 5px;
           cursor: pointer;
         }
     
@@ -78,6 +71,7 @@ $row=mysqli_fetch_array($result);
             <div class="cont1">
                 <li class="logo"><img src="images/GREEN THREADS.png" alt="brandlogo" style="height: 100%;border-radius: 20px;"></li>
                 <li class="home"><a href="home.php">Home</a></li>
+                <li class="team"><a href="#">Shop Now</a></li>
             </div>
         </ul>
     <div class="search_box">
@@ -90,8 +84,19 @@ $row=mysqli_fetch_array($result);
     </div>
         <ul style="padding-left: 0;max-width:fit-content;">
             <div class="cont2">
-                <li class="home"><a href="Aboutus.html">About</a></li>
-                <li class="team"><a href="contactus.html">Contact</a></li>
+            <?php 
+                if($_SESSION["loggedin"]==true){
+                    echo "
+                    <form action='logout.php'>
+                    <button value='submit' >Logout</button>
+                    
+                    </form>
+                    ";
+                }
+                
+                ?>
+                <li class="home"><a href="#">About</a></li>
+                <li class="team"><a href="#">Contact</a></li>
                 <li class="home"><a href="#"><img src="images/ins.png" alt="insta" style="height: 3vh;"></a></li>
                 <li class="team"><a href="#"><img src="images/x.png" alt="twitter" style="height:3vh;"></a></li>
                 <li class="home"><a href="#"><img src="images/fb.png" alt="facebook" style="height: 3vh;"></a></li>
@@ -100,27 +105,32 @@ $row=mysqli_fetch_array($result);
     </div>
     <header style="background-color:grey;font-size:30px;"><center>Welcome <?php echo $_SESSION["username"] ?></center> </header>
     <div style="display: flex;justify-content: center;align-items: center;">
+    
     <div class="main-cnt">
-        <div  class="pi">
-            <img src="images/<?php echo $row['location']?>" alt="Image" style="width:100%;height: 100%;">
+        <div  class="pi"><?php
+        $query = "SELECT * FROM `products` where id=$pid";
+                $result = mysqli_query($conn, $query);
+                $row=mysqli_fetch_array($result);?>
+            <img src='images/<?php echo $row['location']; ?>' alt="Image" style="width:100%;height: 100%;">
         </div>
         <div class="right">
             <div class="pn">
-                <h1 style="text-align: center;">Designer Kurta</h1>
+                <center>
+                <h1 style="text-align: center;"><?php echo $row['name']?></h1>
+                </center>
             </div>
             <div class="pd"> 
-                <span style="font-size:1rem;margin-right: 2vb;"><s style="height: 50;">&#8377;9999</s></span><span style="font-size: 2rem;">&#8377;9000</span>
+                <span style="font-size:1rem;margin-right: 2vb;"></span><span style="font-size: 2rem;">Rs.<?php echo $row['name']?></span>
                 <div>
                 <label for="color">COLOR:</label>
                 <select name="color" id="color">
                     <option value="Red">BLACK</option>
-                    <option value="Green">GREEN</option>
                 </select>
                 </div>
                 <div style="margin-top: 2vh;" class="size">
                     <span style="margin-top: 1VH;margin-right:2px">SIZE:</span>
                     <label>
-                        <input type="radio" id="small" name="size" value="small">
+                        <input type="radio" id="small" name="size" value="small" checked>
                         <label for="small" class="size-label">S</label>
                       </label>
                   
@@ -141,9 +151,7 @@ $row=mysqli_fetch_array($result);
                   
                 </div>
                 <?php
-                $query = "SELECT * FROM `products` where id=$pid";
-                $result = mysqli_query($conn, $query);
-                $row=mysqli_fetch_array($result);
+                
                 ?>
                 <div class="desc" style="text-align: left;">
                     <span style="text-align:left;">
@@ -200,7 +208,7 @@ $row=mysqli_fetch_array($result);
     while ($row = mysqli_fetch_array($result)) {
     ?>
                 <tr>
-                    <td class="remove"><a href="remove.php?pid=<?php echo $row['id']?>" style="text-decoration: none;color: black;"><span class="material-symbols-outlined">cancel</span></a></td>
+                    <td class="remove"><a href="remove.php?pid=<?php echo $row['id']?>" style="text-decoration: none;color: black;" method='get'><span class="material-symbols-outlined">cancel</span></a></td>
                     <td class="image"> <img src="images/<?php echo $row['location']; ?>" style="height:50px;"></td>
                     <td><?php echo $row['name']; ?></td>
                     <td><?php echo $row['price']; ?></td>
@@ -213,6 +221,21 @@ $row=mysqli_fetch_array($result);
     ?>
         </table>
       </div>
+      <script>
+        function toggleCartContainer() {
+        const cartContainer = document.querySelector('.cart-items-container');
+        if (cartContainer) {
+            cartContainer.classList.toggle('show');
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function(){
+        const cartLogo = document.querySelector('.cart-logo');
+        if (cartLogo) {
+            cartLogo.addEventListener('click', toggleCartContainer);
+        }
+    });
+      </script>
     <script src="navigation.js" defer></script>
     <script src="cart.js" defer></script>
     
