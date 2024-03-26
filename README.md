@@ -3,23 +3,20 @@
 
 Our brand, Green Threads connects fashion enthusiasts accross India to an eco-friendly clothing space. As the name of our brand suggests, we believe in conserving the green while creating a fashion brand that does not harm the environment.
 
-## Table of Contents
-
-- Wassup
 ## Introduction
 
-Members:
-Rohiths The Pradeeps
-Adnans The Qureshis
-Aasiyas The Momins
-Dnyaneshs The Mothites
+Our team comprises of four members - Adnan Qureshi, Rohith Pradeep, Aasiya Momin and Dnyanesh Mohite. 
 
 
 ## Features
 
-- Feature 1
-- Feature 2
-- ...
+- **Product Catalog:** Green Threads has a variety of products ranging from ethinic fashion wear to street fashion. Every product is designed with minute detailing and the same is mentioned along with every product.
+- **Filtering and Sorting Options:** We have filtering and sorting features related to different types of fashion, sizes, prices and more.
+-  **High-Quality Imagery:** Every product has high quality and detailed images for every minute attribute.
+-  **Wishlist and Save for later:** Products can be added to unique lists that users might wish to buy later.
+-  **User reviews and ratings:** Users can provide feedback and ratings can be given to products, website and deivery process.
+-  **Order Tracking:** Users can track their orders real-time once they are placed.
+-  **Social Media Integration:** Our social media platforms can be accessed through our website.
 
 ## Getting Started
 
