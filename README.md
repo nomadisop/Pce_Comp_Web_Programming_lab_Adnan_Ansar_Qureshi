@@ -17,6 +17,8 @@ Our team comprises of four members - Adnan Qureshi, Rohith Pradeep, Aasiya Momin
 -  **User reviews and ratings:** Users can provide feedback and ratings can be given to products, website and deivery process.
 -  **Order Tracking:** Users can track their orders real-time once they are placed.
 -  **Social Media Integration:** Our social media platforms can be accessed through our website.
+-  **Sustainabilty Information:** We provide full transparency on our claim to be an environmental-friendly brand.
+-  **Secure Checkout Process:** Our website is fully secure and respects customer's privacy.
 
 ## Getting Started
 
