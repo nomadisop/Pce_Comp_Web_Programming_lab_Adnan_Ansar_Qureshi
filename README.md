@@ -1,7 +1,7 @@
 
-#Eco Freindly Clothing Marketplace
+## Sustainable Fashion Marketplace
 
-Brief description or tagline about your project.
+Our brand, Green Threads connects fashion enthusiasts accross India to an eco-friendly clothing space. As the name of our brand suggests, we believe in conserving the green while creating a fashion brand that does not harm the environment.
 
 ## Table of Contents
 
