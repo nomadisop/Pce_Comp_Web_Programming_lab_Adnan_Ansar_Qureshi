@@ -95,8 +95,8 @@ include 'connect.php';
             <video src="Green Fashion - Sustainable clothing at UNEA.mp4" style="width:80%" controls></video>
         </center>
     </div>
-    <div style="display:flex;width: 100%;">
-        <div class="filters">
+    <div style="display:flex;width: 100%;background-color:wheat;height=600px;">
+        <div class="filters" style="background-color:wheat;height=600px">
             <form action="filter.php" method="post">
             <div>
                 <input type="checkbox" name="category" id="jeans" value="1">

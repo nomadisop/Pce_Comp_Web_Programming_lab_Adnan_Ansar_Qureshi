@@ -1,5 +1,5 @@
 body{
-  background-color: wheat;
+  background-color: white;
     background-size:cover;
     background-repeat: no-repeat;
     flex-direction: column;
@@ -11,7 +11,7 @@ body{
   .filters{
     display: block;
     width: 20%;
-    background-color: wheat;
+    background-color:wheat;
     height: 600px;
   }
 
