@@ -59,3 +59,49 @@ body{
   .devmain span{
     font-size: 20px;
   }
+
+  .filters-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.filters-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+}
+
+.submit-button, .reset-button {
+    background-color:  #c1a780;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 2px;
+}
+
+.submit-button:hover, .reset-button:hover {
+    background-color: wheat;
+}
+
+.reset-form {
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    .filter-option {
+        width: 50%;
+    }
+}
