@@ -11,5 +11,5 @@ foreach($_SESSION['cart'] as $value){
     echo $value;
 }
 echo "<script>alert('Item added to cart');
-        window.history.back();</script>";
+        window.history.back();</script>";   //go back to previous window
 ?>

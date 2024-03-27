@@ -42,7 +42,7 @@ $quantity=2;
     
         <ul style="padding-left: 0;max-width:fit-content;">
             <div class="cont2">
-                <li class="about"><a href="#">Cart(current)</a></li>
+                <li class="about"><a href="#">Cart</a></li>
                 <li class="about"><a href="home.php">Home</a></li>
                 <li class="about"><a href="Aboutus.html">About</a></li>
                 <li class="contact"><a href="contactus.html">Contact</a></li>

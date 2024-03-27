@@ -18,7 +18,11 @@ body .navbar{
   box-shadow: 23px 4px 9px 6px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
 }
-
+.navbar .active{
+  font-size: 20px;
+  color: black;
+  font-weight: 900;
+}
 /*Links left side of search bar in navigation bar*/
 .navbar .cont1{
   list-style: none;
@@ -158,4 +162,14 @@ tbody td{
   border-left: none;
   border-right: none;
   padding: 1%;
+}
+.btn{
+  background-color: rgb(21, 116, 116);
+  padding: 10px;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.btn:hover{
+  background-color: rgb(43, 142, 142);
 }
