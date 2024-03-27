@@ -99,34 +99,29 @@ $cat=$_POST['category'];
                 controls></video>
         </center>
     </div>
-    <div style="display:flex;width: 100%;">
-        <div class="filters">
-            <form action="filter.php" method="post">
-            <div>
-                <input type="checkbox" name="category" id="jeans" value="1">
-                <label for="jeans">Jacket</label>
-            </div>
-            <div>
-                <input type="checkbox" name="category" id="winter" value="2">
-                <label for="winter">Winterwear</label>
-            </div>
-            <div style="display: flex;width: 100%;">
-                <input type="checkbox" name="category" id="kurta" value="3">
-                <label for="kurta">Kurta</label>
-            </div>
-            <button
-                type="submit"
-                class="btn btn-primary"
-            >
-                Submit
-            </button>
+    <div style="display:flex;width:100%;background-color:wheat;height:fit-content">
+        <div class="filters-container" >
+            <center><article style="font-size: 32px;background-color:#c1a780;border: solid;">Filters</article></center>
+            <div style="background-color:rgb(242, 242, 242);border: solid;border-top: none;">
+            <form action="filter.php" method="post" class="filters-form" style="padding-top: 15px;">
+                <div class="filter-option">
+                    <input type="checkbox" name="category" id="jeans" value="1">
+                    <label for="jeans">Jeans</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" name="category" id="Winterwear" value="2">
+                    <label for="Winterwear">Winterwear</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" name="category" id="ethnic" value="3">
+                    <label for="ethnic">Ethnic</label>
+                </div>
+                <button type="submit" class="submit-button" style="margin-bottom: 10px;margin-top: 50px;">Apply Filters</button>
             </form>
-            <form action="home.php">
-            <button>Reset</button>
+            <form action="home.php" class="filters-form">
+                <button type="submit" class="reset-button" style="margin-bottom: 10px;">Reset Filters</button>
             </form>
-            
-            
-
+        </div>
         </div>
         <div class="products">
     <?php
