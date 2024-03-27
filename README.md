@@ -7,7 +7,6 @@ Our brand, Green Threads connects fashion enthusiasts accross India to an eco-fr
 
 Our team comprises of four members - Adnan Qureshi, Rohith Pradeep, Aasiya Momin and Dnyanesh Mohite. 
 
-
 ## Features
 
 - **Product Catalog:** Green Threads has a variety of products ranging from ethinic fashion wear to street fashion. Every product is designed with minute detailing and the same is mentioned along with every product.
@@ -22,5 +21,7 @@ Our team comprises of four members - Adnan Qureshi, Rohith Pradeep, Aasiya Momin
 
 ## Getting Started
 
-instructions on how to get the project up and running on a local machine.
+**Username:** master
+**Password:** 1234567
+
 
