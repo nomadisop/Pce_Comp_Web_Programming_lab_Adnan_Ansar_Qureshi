@@ -120,7 +120,7 @@ $pid=2;
                 </center>
             </div>
             <div class="pd"> 
-                <span style="font-size:1rem;margin-right: 2vb;"></span><span style="font-size: 2rem;">Rs.<?php echo $row['name']?></span>
+                <span style="font-size:1rem;margin-right: 2vb;"></span><span style="font-size: 2rem;">Rs.<?php echo $row['price']?></span>
                 <div>
                 <label for="color">COLOR:</label>
                 <select name="color" id="color">
