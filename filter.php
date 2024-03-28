@@ -105,16 +105,16 @@ $cat=$_POST['category'];
             <div style="background-color:rgb(242, 242, 242);border: solid;border-top: none;">
             <form action="filter.php" method="post" class="filters-form" style="padding-top: 15px;">
                 <div class="filter-option">
-                    <input type="checkbox" name="category" id="jeans" value="1">
-                    <label for="jeans">Jeans</label>
+                    <input type="checkbox" name="category" id="winter" value="2">
+                    <label for="winter">Winterwear</label>
                 </div>
                 <div class="filter-option">
-                    <input type="checkbox" name="category" id="Winterwear" value="2">
-                    <label for="Winterwear">Winterwear</label>
+                    <input type="checkbox" name="category" id="kurta" value="3">
+                    <label for="kurta">Kurta</label>
                 </div>
                 <div class="filter-option">
-                    <input type="checkbox" name="category" id="ethnic" value="3">
-                    <label for="ethnic">Ethnic</label>
+                    <input type="checkbox" name="category" id="Shirts" value="4">
+                    <label for="Shirts">Jeans</label>
                 </div>
                 <button type="submit" class="submit-button" style="margin-bottom: 10px;margin-top: 50px;">Apply Filters</button>
             </form>
@@ -123,10 +123,10 @@ $cat=$_POST['category'];
             </form>
         </div>
         </div>
+
         <div class="products">
-    <?php
-    
-    if($cat!=0){
+            <?php
+        if($cat!=0){
     $query = "SELECT * FROM `products` where category='$cat';";}
     else{
         $query = "SELECT * FROM `products`;";
@@ -138,8 +138,8 @@ $cat=$_POST['category'];
             <a href="<?php echo $row['plink'];?>"><img src='images/<?php echo $row['location']; ?>' alt="image" style="width: 100%"></a>
 
             <div>
-                <center><span><?php echo $row['name']; ?>
-                        <?php echo $row['price']; ?></span></center>
+                <center><span><?php echo $row['name']; ?><br>
+                        Price:<?php echo $row['price']; ?></span></center>
             </div>
         </div>
     <?php
@@ -148,6 +148,23 @@ $cat=$_POST['category'];
 </div>
 
     </div>
+
+<center>
+    <div>
+        <canvas id="canvas1" width="200" height="100"></canvas>
+    </div>
+</center>   
+
+
+    <script src="navigation.js" defer></script>
+    <script>
+        const canvas = document.getElementById("canvas1");
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "Green";
+
+    ctx.font = "30px Arial";
+    ctx.fillText("SAVE EARTH", 10, 50);
+    </script>
 
 </body>
 

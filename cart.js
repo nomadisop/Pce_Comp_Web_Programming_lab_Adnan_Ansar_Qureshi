@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 const pricePerItem = parseFloat(amountElement.textContent.replace('$', ''));
                 const quantity = parseInt(quantityInput.value);
                 const subtotal = pricePerItem * quantity;
-                subtotalElement.textContent = 'RS.' + subtotal.toFixed(2);
+                subtotalElement.textContent = '$' + subtotal.toFixed(2);
                 updateTotalPrice(); 
             });
         });
